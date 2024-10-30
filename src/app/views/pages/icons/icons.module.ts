@@ -6,7 +6,7 @@ import { FeatherIconModule } from '../../../core/feather-icon/feather-icon.modul
 
 import { IconsComponent } from './icons.component';
 import { FeatherComponent } from './feather/feather.component';
-import { MdiComponent } from './mdi/mdi.component';
+
 
 const routes: Routes = [
   {
@@ -22,16 +22,13 @@ const routes: Routes = [
         path: 'feather-icons',
         component: FeatherComponent
       },
-      {
-        path: 'mdi-icons',
-        component: MdiComponent
-      }
+     
     ]
   }
 ]
 
 @NgModule({
-  declarations: [IconsComponent, FeatherComponent, MdiComponent],
+  declarations: [IconsComponent, FeatherComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -1,0 +1,392 @@
+<div class="row" *ngIf="showDepartment1">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Department 1 View Details</h6>
+                <form #departmentEditForm1="ngForm">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">EID</label> <br>
+                                <span> {{nid}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ration Card No.*</label> <br>
+                                <span>{{rationCardNo}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Name</label> <br>
+                                <span>{{name}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Aadhaar Card No.*</label> <br>
+                                <span>{{aadhaarNo}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Mobile No. </label> <br>
+                                <span>{{mobileNumber}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Address*</label> <br>
+                                <span>{{address}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward No.</label> <br>
+                                <span>{{wardNumber}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Name</label> <br>
+                                <span>{{wardName}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">House No.</label> <br>
+                                <span>{{houseNumber}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Pin Code </label><br>
+                                <span>{{pincode}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Post Office</label> <br>
+                                <span>{{postOffice}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Electoral Card No.</label> <br>
+                                <span>{{electoralCardNo}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Annual Income</label> <br>
+                                <span>{{income}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Member/Councillor Name</label> <br>
+                                <span>{{wardMember}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Name</label> <br>
+                                <span>{{bankName}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Branch</label> <br>
+                                <span>{{bankBranch}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">IFSC Code</label> <br>
+                                <span>{{ifsc}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Account No.</label> <br>
+                                <span>{{accountNumber}}</span>
+                            </div>
+                        </div>
+
+
+                        <!-- radio button  -->
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Availing Pension</h5>
+                                    <span>{{availingPension}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Paying IT</h5>
+                                    <span>{{payingIt}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Possessing EPF</h5>
+                                    <span>{{possessingEPF}}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="pull-right">
+                    <button type="button" (click)="cancel()" class="btn btn-primary cancel ">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row transerData">
+    <div class="col-md-12 stretch-card DataRequest">
+        <div class="card">
+            <div class="card-body">
+                <form #department2Data="ngForm">
+                    <div class="row" *ngIf="status !='Approved'">
+                        <div class="col-md-3 form-group">
+                            <h6>Get user data from Department 2</h6>
+                        </div>
+                        <div class="col-md-6 form-group" *ngIf="status == 'Request not found'">
+                            <label for="get">Reason to get the data</label> <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest">
+                        </div>
+                        <div class="col-md-3 form-group" *ngIf="status == 'Request not found'">
+                            <button type="button" class="btn btn-primary pull-right initial"
+                                (click)="getDataFromDepartmen2()">
+                                Request Data</button>
+                        </div>
+                        <div class="col-md-6 form-group comment" *ngIf="status != 'Request not found' && status != 'Pending' && status !='Data not found in other department'">
+                            <h6 >Reason For Rejection: <span>{{comment}}</span></h6>
+                        </div>
+                        <div class="col-md-3 form-group statusCheck" *ngIf="status != 'Request not found'">
+                            <h6>{{status}}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 form-group" *ngIf="status =='Approved'">
+                            <h6>Access Granted For Department 2</h6>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--  Request Form Data -->
+<div class="row transerData" *ngIf="status == 'Rejected'">
+    <div class="col-md-12 stretch-card DataRequest">
+        <div class="card">
+            <div class="card-body">
+                <form #department2Data="ngForm">
+                    <div class="row" >
+                        <div class="col-md-4 form-group">
+                            <h6>Re-request to Get user data from Department 2</h6>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="get">Reason to get the data</label> <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest">
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <button type="button" class="btn btn-primary pull-right initial"
+                                (click)="getDataFromDepartmen2()">
+                                Re-request Data</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+<div class="row department2" *ngIf="showDepartment2">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Department 2 View Details</h6>
+                <form #departmentAddForm2="ngForm">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">EID</label> <br>
+                                <span>{{nid2}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Scheme Card No.*</label> <br>
+                                <span>{{schemeCardNo}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Name</label> <br>
+                                <span>{{name2}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Aadhaar Card No.*</label> <br>
+                                <span>{{aadhaarNo2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Mobile No. </label> <br>
+                                <span>{{mobileNo2}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Taluk Supply Office</label> <br>
+                                <span>{{talukSupplyOffice}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ration Shop</label> <br>
+                                <span>{{rationShop}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Panchayat/Municipality/Corporation</label> <br>
+                                <span>{{municipality}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward No.</label> <br>
+                                <span>{{wardNo2}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">House No.</label> <br>
+                                <span>{{houseNumber2}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Address</label> <br>
+                                <span>{{address2}}</span>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Taluk</label> <br>
+                                <span>{{taluk}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Village</label> <br>
+                                <span>{{village}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Pincode</label> <br>
+                                <span>{{pinCode2}}</span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">LPG Connection</label> <br>
+                                <span>{{lpgConnection}}</span>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3" *ngIf="lpgConnection =='Yes'">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">No. of LPG Cylinder</label> <br>
+                                <span>{{noOfCylinder}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3" *ngIf="lpgConnection =='Yes'">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">LPG Consumer No.</label> <br>
+                                <span>{{consumerNo}}</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3" *ngIf="lpgConnection =='Yes'">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">LPG Comapany</label> <br>
+                                <span>{{company}}</span>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3" *ngIf="lpgConnection =='Yes'">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">LPG Agency</label> <br>
+                                <span>{{agency}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="form-label">House Electrified</label> <br>
+                                    <span>{{houseElectrified}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Consumer No.</label> <br>
+                                <span>{{sectionCode}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-spin-fade-rotating" [fullScreen]="true">
+    <p style="color: black"> Loading... </p>
+</ngx-spinner>

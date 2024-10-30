@@ -1,0 +1,248 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Department 1 Edit Details</h6>
+                <form #departmentEditForm1="ngForm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">NID</label>
+                                <input type="text" class="form-control" #nids="ngModel"
+                                    placeholder="Please Enter NID " name="nids" [(ngModel)]="nid">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ration Card No.</label>
+                                <input type="text" class="form-control" #ration="ngModel" name="card"
+                                    placeholder="Please Enter Ration Card No." [(ngModel)]="rationCardNo">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" #namePlease="ngModel" name="namePlease"
+                                    placeholder="Please Enter Name" [(ngModel)]="name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Aadhaar Card No.*</label>
+                                <input type="text" class="form-control" #aadharcard="ngModel" name="aadharcard" required 
+                                   minlength="12" maxlength="12" placeholder="Please Enter Aadhaar Card No." [(ngModel)]="aadhaarNo">
+                                   <span *ngIf="aadharcard.invalid && aadharcard.touched">Please Enter Aadhar Card No.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Mobile No.</label>
+                                <input type="tel" class="form-control" #mobile="ngModel" name="mobile"
+                                minlength="10" maxlength="10" placeholder="Please Enter Mobile No." [(ngModel)]="mobileNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Address*</label>
+                                <input type="text" class="form-control" #addresplease="ngModel" name="addresplease"
+                                    placeholder="Please Enter Address" [(ngModel)]="address">
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #wards="ngModel"
+                                    name="wards" placeholder="Please Enter Ward No."
+                                    [(ngModel)]="wardNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #wardname="ngModel"
+                                    name="wardname" [(ngModel)]="wardName" placeholder="Please Enter Ward Name ">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">House No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #houseNo="ngModel"
+                                    name="houseNo" placeholder="Please Enter House No."
+                                    [(ngModel)]="houseNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Pin Code</label>
+                                <input type="text" class="form-control" autocomplete="off" #pinCode="ngModel"
+                                    name="pinCode" [(ngModel)]="pincode" placeholder="Please Enter Pin Code ">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Post Office</label>
+                                <input type="text" class="form-control" autocomplete="off" #post="ngModel"
+                                    name="post" [(ngModel)]="postOffice"
+                                    placeholder="Please Enter Post Office">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Electoral Card No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #electoral="ngModel"
+                                    name="electoral" [(ngModel)]="electoralCardNo"
+                                    placeholder="Please Enter Electoral Card No.">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Income</label>
+                                <input type="text" class="form-control" autocomplete="off" #incomes="ngModel"
+                                    name="incomes" [(ngModel)]="income" placeholder="Please Enter Income">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Member/Councillor Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #member="ngModel"
+                                    name="member" [(ngModel)]="wardMember"
+                                    placeholder="Please Enter Ward Member/Councillor Name">
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #namebank="ngModel"
+                                    name="namebank" [(ngModel)]="bankName" placeholder="Please Enter Bank Name ">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Branch</label>
+                                <input type="text" class="form-control" autocomplete="off" #bankbranch="ngModel"
+                                    name="bankbranch" [(ngModel)]="bankBranch"
+                                    placeholder="Please Enter Bank Branch">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">IFSC Code</label>
+                                <input type="text" class="form-control" autocomplete="off" #ifsccode="ngModel"
+                                    name="ifsccode" [(ngModel)]="ifsc" placeholder="Please Enter IFSC Code">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Account No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #account="ngModel"
+                                    name="account" [(ngModel)]="accountNumber"
+                                    placeholder="Please Enter Account No.">
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- radio button  -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Availing Pension</h5>
+                                </div>
+                                <div class="col-md-2 form-check form-group" >
+                                    <input class="form-check-input" type="radio" #flexRadioDefault1="ngModel" value="Yes" name="flexRadioDefault1"
+                                        id="flexRadioDefault1" [(ngModel)]="availingPension">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                       Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio"#flexRadioDefault1="ngModel" value="No" name="flexRadioDefault1"
+                                        id="flexRadioDefault2"  [(ngModel)]="availingPension">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Paying IT</h5>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefaults="ngModel" value="Yes" name="flexRadioDefaults"
+                                        id="flexRadioDefault3" [(ngModel)]="payingIt">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefaults="ngModel" value="No" name="flexRadioDefaults"
+                                        id="flexRadioDefault4" [(ngModel)]="payingIt" >
+                                    <label class="form-check-label" for="flexRadioDefault4">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Possessing EPF</h5>
+                                </div>
+                                <div class="col-md-2 form-check">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault="ngModel" value="Yes" name="flexRadioDefault"
+                                        id="flexRadioDefault5" [(ngModel)]="possessingEPF">
+                                    <label class="form-check-label" for="flexRadioDefault5">
+                                       Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault="ngModel" value="No"  name="flexRadioDefault"
+                                        id="flexRadioDefault5" [(ngModel)]="possessingEPF">
+                                    <label class="form-check-label" for="flexRadioDefault6">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- radio button  -->
+                </form>
+                <div class="pull-right">
+                    <button type="button" (click)="cancel()" class="btn btn-primary cancel ">Cancel</button>
+                    <button type="button" [disabled]="departmentEditForm1.invalid" class="btn btn-primary submit" (click)="departEditForm()">Submit </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-fade-rotating" [fullScreen] = "true"><p style="color: black" > Loading... </p></ngx-spinner>

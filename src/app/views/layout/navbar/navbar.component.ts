@@ -37,9 +37,5 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/auth/login']);
     }
   }
-  navigateToConfiguration(event: Event) {
-    event.preventDefault(); // Prevent default action
-    this.router.navigate(['/setting/configuration']); // Navigate to the configuration page
-  }  
 
 }

@@ -1,0 +1,865 @@
+<div class="row">
+  <div class="col-md-12 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Property Tax Scheme: View Details</h6>
+        <form #departmentAddForm2="ngForm">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Address</label> <br />
+                <span>{{ address }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Allotment Date</label> <br />
+                <span>{{ allotmentDate }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Allotment No</label> <br />
+                <span>{{ allotmentNo }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Aadhaar Card No</label> <br />
+                <span>{{ aadhaarNo }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Mobile No</label> <br />
+                <span>{{ mobileNo }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Building Or Colony Name</label> <br />
+                <span>{{ buildingOrColonyName }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Business Name</label> <br />
+                <span>{{ businessName }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">City</label> <br />
+                <span>{{ city }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Email Id</label> <br />
+                <span>{{ emailId }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Gender</label> <br />
+                <span>{{ gender }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Guardian Name</label> <br />
+                <span>{{ guardianName }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">House Or ShopNo</label> <br />
+                <span>{{ houseOrShopNo }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label"
+                  >Inflammable Material Stored In Your Property</label
+                >
+                <br />
+                <span>{{ inflammableMaterialStoredInYourProperty }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Locality Or Mohalla</label> <br />
+                <span>{{ localityOrMohalla }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Name Of Owner</label> <br />
+                <span>{{ nameOfOwner }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Ownership</label> <br />
+                <span>{{ ownerShip }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Owner ship Percentage</label> <br />
+                <span>{{ ownershipPercentage }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Pincode</label> <br />
+                <span>{{ pincode }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Existing Property</label> <br />
+                <span>{{ propertyId }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Height of property less than 36 ft</label>
+                <br />
+                <span>{{ propertyMoreThan36FT }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Property Type</label> <br />
+                <span>{{ propertyType }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Registered Will</label> <br />
+                <span>{{ registeredWill }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Relationship</label> <br />
+                <span>{{ relationship }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Remark</label> <br />
+                <span>{{ remark }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Special Category</label> <br />
+                <span>{{ specialCategory }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Street Name</label> <br />
+                <span>{{ streetName }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Survey ID / UID</label> <br />
+                <span>{{ surveyId }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Type</label> <br />
+                <span>{{ type }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Vasika Date</label> <br />
+                <span>{{ vasikaDate }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Vasika No</label> <br />
+                <span>{{ vasikaNo }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Yards</label> <br />
+                <span>{{ yards }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Year Of Creation Of Property</label>
+                <br />
+                <span>{{ yearOfCreationOfProperty }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Address Proof</label> <br />
+                <button
+                  class="btn btn-primary"
+                  (click)="downloadDocument(addressProof)"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Usage Proof</label> <br />
+                <button
+                  class="btn btn-primary"
+                  (click)="downloadDocument(usageProof)"
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="pull-right">
+          <button
+            type="button"
+            (click)="cancel()"
+            class="btn btn-primary cancel"
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row transerData">
+  <div class="col-md-12 stretch-card DataRequest">
+    <div class="card">
+      <div class="card-body">
+        <form
+          #department2Data="ngForm"
+          *ngIf="birthCertificateRequestStatus != 'Approved'"
+        >
+          <div class="row">
+            <div class="col-md-5 form-group">
+              <h6>Birth Certificate Verification</h6>
+            </div>
+            <div class="col-md-5 form-group">
+              <h6 for="get">Food and Supplies Department</h6>
+            </div>
+            <!-- {{status}} -->
+            <div
+              class="col-md-2 form-group"
+              *ngIf="birthCertificateRequestStatus == 'Request not found'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getBirthDataFromDepartmen2()"
+              >
+                Validate
+              </button>
+            </div>
+            <div
+            class="col-md-2 form-group"
+            *ngIf="birthCertificateRequestStatus == 'Rejected'"
+          >
+            <button
+              type="button"
+              class="btn btn-primary pull-right initial"
+              (click)="getBirthDataFromDepartmen2()"
+            >
+              Resend
+            </button>
+          </div>
+            <div
+              class="col-md-2 form-group statusCheck"
+              *ngIf="birthCertificateRequestStatus == 'Pending'"
+            >
+              <h6>{{ birthCertificateRequestStatus }}</h6>
+            </div>
+            <div
+            class="col-md-2 form-group statusCheck"
+            *ngIf="birthCertificateRequestStatus == 'Data not found in other department'"
+          >
+            <h6>{{ birthCertificateRequestStatus }}</h6>
+          </div>
+          </div>
+        </form>
+        <div
+          class="col-md-12 form-group"
+          *ngIf="birthCertificateRequestStatus == 'Approved'"
+        >
+          <h6>Birth Certificate Verified From Food and Supplies Dept: Details Below </h6>
+          <br>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Date of Birth</label> <br />
+                <span>{{ department2Data.verificationDTO.dateOfbirth }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Document Type</label> <br />
+                <span>{{ department2Data.verificationDTO.documentType }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Document Issue Date</label> <br />
+                <span>{{ department2Data.verificationDTO.documentIssueDate }}</span>
+              </div>
+            </div>
+           
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="mb-3 form-group">
+                <label class="form-label">Document Number</label> <br />
+                <span>{{ department2Data.verificationDTO.documentNumber }}</span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div
+                class="mb-3 form-group"
+                *ngIf="department2Data.verificationDTO?.birthCertificate"
+              >
+                <label class="form-label">Birth Certificate</label> <br />
+                <button
+                  class="btn btn-primary"
+                  (click)="
+                    downloadDocument(
+                      department2Data.verificationDTO.birthCertificate
+                    )
+                  "
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row transerData">
+  <div class="col-md-12 stretch-card DataRequest">
+    <div class="card">
+      <div class="card-body">
+        <form
+          #department2Data="ngForm"
+          *ngIf="mnregaRequestStatus != 'Approved'"
+        >
+          <div class="row">
+            <div class="col-md-5 form-group">
+              <h6>MNREGA Certificate Verification</h6>
+            </div>
+            <div class="col-md-5 form-group">
+              <h6 for="get">Food and Supplies Department</h6>
+              <!-- <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest"> -->
+            </div>
+            <div
+              class="col-md-2 form-group"
+              *ngIf="mnregaRequestStatus == 'Request not found'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getManregraDataFromDepartmen2()"
+              >
+                Validate
+              </button>
+            </div>
+
+            <div
+            class="col-md-2 form-group"
+            *ngIf="mnregaRequestStatus == 'Rejected'"
+          >
+            <button
+              type="button"
+              class="btn btn-primary pull-right initial"
+              (click)="getManregraDataFromDepartmen2()"
+            >
+              Resend
+            </button>
+          </div>        
+            <div
+            class="col-md-2 form-group statusCheck"
+            *ngIf="mnregaRequestStatus == 'Pending'"
+          >
+            <h6>{{ mnregaRequestStatus }}</h6>
+          </div>
+          <div
+          class="col-md-2 form-group statusCheck"
+          *ngIf="mnregaRequestStatus == 'Data not found in other department'"
+        >
+          <h6>{{ mnregaRequestStatus }}</h6>
+        </div>
+          </div>
+        </form>
+        <div
+          class="col-md-12 form-group"
+          *ngIf="mnregaRequestStatus == 'Approved'"
+        >
+          <h6>MNREGA Certificate Verified From Food and Supplies Dept: Details Below</h6>
+          <br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">MNREGA Card</label> <br />
+                <span>{{ department2Data.verificationDTO.mnrega }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">MNREGA Card No</label> <br />
+                <span>{{ department2Data.verificationDTO.mnregaCardNo }}</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div
+                class="mb-3 form-group"
+                *ngIf="department2Data.verificationDTO?.mnregaCard"
+              >
+                <label class="form-label">MNREGA</label> <br />
+                <button
+                  class="btn btn-primary"
+                  (click)="
+                    downloadDocument(department2Data.verificationDTO.mnregaCard)
+                  "
+                >
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row transerData">
+  <div class="col-md-12 stretch-card DataRequest">
+    <div class="card">
+      <div class="card-body">
+        <form
+          #department2Data="ngForm"
+          *ngIf="specialCategoryRequestStatus != 'Approved'"
+        >
+          <div class="row">
+            <div class="col-md-5 form-group">
+              <h6>Special Category Verification</h6>
+            </div>
+            <div class="col-md-5 form-group">
+              <h6 for="get">Food and Supplies Department</h6>
+              <!-- <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest"> -->
+            </div>
+            <div
+              class="col-md-2 form-group"
+              *ngIf="specialCategoryRequestStatus == 'Request not found'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getSpecialCategoryDataFromDepartmen2()"
+              >
+                Validate
+              </button>
+            </div>
+            <div
+              class="col-md-2 form-group"
+              *ngIf="specialCategoryRequestStatus == 'Rejected'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getSpecialCategoryDataFromDepartmen2()"
+              >
+                Resend
+              </button>
+            </div>
+            <!-- <div class="col-md-6 form-group comment" *ngIf="status != 'Request not found' && status != 'Pending' && status !='Data not found in other department'">
+                            <h6 >Reason For Rejection: <span>{{comment}}</span></h6>
+                        </div> -->
+            
+            <div
+            class="col-md-2 form-group statusCheck"
+            *ngIf="specialCategoryRequestStatus == 'Pending'"
+          >
+            <h6>{{ specialCategoryRequestStatus }}</h6>
+          </div>
+          <div
+          class="col-md-2 form-group statusCheck"
+          *ngIf="specialCategoryRequestStatus == 'Data not found in other department'"
+        >
+          <h6>{{ specialCategoryRequestStatus }}</h6>
+        </div>
+          </div>
+        </form>
+        <div class="col-md-12 form-group" *ngIf="specialCategoryRequestStatus == 'Approved'">
+          <h6>Special Certificate Verified From Food and Supplies Dept: Details Below</h6><br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div
+                class="mb-3 form-group"
+                *ngIf="department2Data.verificationDTO?.specialCategory"
+              >
+                <label class="form-label">Special Category</label> <br />
+                <span>{{
+                  department2Data.verificationDTO.specialCategory
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3 form-group" *ngIf="specialCategoryRequestStatus =='Approved'">
+                        <h6>Special Certificate Department Verified Details</h6>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="mb-3 form-group" *ngIf="department2Data.verificationDTO?.specialCategory">
+                                    <label class="form-label">Special Category</label> <br>
+                                    <span>{{department2Data.verificationDTO.specialCategory}}</span>
+                                    <button class="btn btn-primary" (click)="downloadDocument(department2Data.verificationDTO.specialCategory)">Download</button>     
+                                </div>
+                            </div>
+                            </div>
+                    </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row transerData">
+  <div class="col-md-12 stretch-card DataRequest">
+    <div class="card">
+      <div class="card-body">
+        <form #department2Data="ngForm" *ngIf="bankRequestStatus != 'Approved'">
+          <div class="row">
+            <div class="col-md-5 form-group">
+              <h6>Bank Account Verification</h6>
+            </div>
+            <div class="col-md-5 form-group">
+              <h6 for="get">Food and Supplies Department</h6>
+              <!-- <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest"> -->
+            </div>
+            <div
+              class="col-md-2 form-group"
+              *ngIf="bankRequestStatus == 'Request not found'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getBankDataFromDepartmen2()"
+              >
+                Validate
+              </button>
+            </div>
+            <div
+            class="col-md-2 form-group"
+            *ngIf="bankRequestStatus == 'Rejected'"
+          >
+            <button
+              type="button"
+              class="btn btn-primary pull-right initial"
+              (click)="getBankDataFromDepartmen2()"
+            >
+              Resend
+            </button>
+          </div>
+            <!-- <div class="col-md-6 form-group comment" *ngIf="status != 'Request not found' && status != 'Pending' && status !='Data not found in other department'">
+                            <h6 >Reason For Rejection: <span>{{comment}}</span></h6>
+                        </div> -->
+            <div
+            class="col-md-2 form-group statusCheck"
+            *ngIf="bankRequestStatus == 'Pending'"
+          >
+            <h6>{{ bankRequestStatus }}</h6>
+          </div>
+          <div
+          class="col-md-2 form-group statusCheck"
+          *ngIf="bankRequestStatus == 'Data not found in other department'"
+        >
+          <h6>{{ bankRequestStatus }}</h6>
+        </div>
+          </div>
+        </form>
+        <div
+          class="col-md-12 form-group"
+          *ngIf="bankRequestStatus == 'Approved'"
+        >
+          <h6>Bank Certificate Verified From Food and Supplies Dept: Details Below</h6>
+          <br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Bank Name</label> <br />
+                <span>{{ department2Data.verificationDTO.bankName }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Bank District</label> <br />
+                <span>{{ department2Data.verificationDTO.bankDistrict }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Bank State</label> <br />
+                <span>{{ department2Data.verificationDTO.bankState }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Bank Account Number</label> <br />
+                <span>{{
+                  department2Data.verificationDTO.bankAccountNumber
+                }}</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Branch Name</label> <br />
+                <span>{{ department2Data.verificationDTO.branchName }}</span>
+              </div>
+            </div>
+            <!-- <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Card Type</label> <br />
+                <span>{{ department2Data.verificationDTO.cardType }}</span>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row transerData">
+  <div class="col-md-12 stretch-card DataRequest">
+    <div class="card">
+      <div class="card-body">
+        <form
+          #department2Data="ngForm"
+          *ngIf="addressRequestStatus != 'Approved'"
+        >
+          <div class="row">
+            <div class="col-md-5 form-group">
+              <h6>Address Document Verification</h6>
+            </div>
+            <div class="col-md-5 form-group">
+              <h6 for="get">Food and Supplies Department</h6>
+              <!-- <input type="text"
+                                class="form-control reason" name="reason" #reason="ngModel"
+                                [(ngModel)]="reasonForRequest"> -->
+            </div>
+            <div
+              class="col-md-2 form-group"
+              *ngIf="addressRequestStatus == 'Request not found'"
+            >
+              <button
+                type="button"
+                class="btn btn-primary pull-right initial"
+                (click)="getAddressDataFromDepartmen2()"
+              >
+                Validate
+              </button>
+            </div>
+            <div
+            class="col-md-2 form-group"
+            *ngIf="addressRequestStatus == 'Rejected'"
+          >
+            <button
+              type="button"
+              class="btn btn-primary pull-right initial"
+              (click)="getAddressDataFromDepartmen2()"
+            >
+             Resend
+            </button>
+          </div>
+            <!-- <div class="col-md-6 form-group comment" *ngIf="status != 'Request not found' && status != 'Pending' && status !='Data not found in other department'">
+                            <h6 >Reason For Rejection: <span>{{comment}}</span></h6>
+                        </div> -->
+            <div
+            class="col-md-2 form-group statusCheck"
+            *ngIf="addressRequestStatus == 'Pending'"
+          >
+            <h6>{{ addressRequestStatus }}</h6>
+          </div>
+          <div
+          class="col-md-2 form-group statusCheck"
+          *ngIf="addressRequestStatus == 'Data not found in other department'"
+        >
+          <h6>{{ addressRequestStatus }}</h6>
+        </div>
+          </div>
+        </form>
+        <div
+          class="col-md-12 form-group"
+          *ngIf="addressRequestStatus == 'Approved'"
+        >
+          <h6>Address Document Verified From Food and Supplies Dept: Details Below</h6><br>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">House No</label> <br />
+                <span>{{ department2Data.verificationDTO.houseNo }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">House Name</label> <br />
+                <span>{{ department2Data.verificationDTO.houseName }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Lank mark</label> <br />
+                <span>{{ department2Data.verificationDTO.lankmark }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Locality</label> <br />
+                <span>{{ department2Data.verificationDTO.locality }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Colony</label> <br />
+                <span>{{ department2Data.verificationDTO.houseName }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Village</label> <br />
+                <span>{{ department2Data.verificationDTO.village }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">TownName</label> <br />
+                <span>{{ department2Data.verificationDTO.locality }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Taluka</label> <br />
+                <span>{{ department2Data.verificationDTO.taluka }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Tehsil</label> <br />
+                <span>{{ department2Data.verificationDTO.tehsil }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Sub District</label> <br />
+                <span>{{ department2Data.verificationDTO.subDistrict }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">District</label> <br />
+                <span>{{ department2Data.verificationDTO.district }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">State</label> <br />
+                <span>{{ department2Data.verificationDTO.state }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Block</label> <br />
+                <span>{{ department2Data.verificationDTO.block }}</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="mb-3 form-group">
+                <label class="form-label">Pin code</label> <br />
+                <span>{{ department2Data.verificationDTO.pincode }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row"></div>
+
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-spin-fade-rotating"
+  [fullScreen]="true"
+>
+  <p style="color: black">Loading...</p>
+</ngx-spinner>

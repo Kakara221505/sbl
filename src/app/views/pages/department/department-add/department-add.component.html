@@ -1,0 +1,248 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Department 1 Add New Details</h6>
+                <form #departmentAddForm1="ngForm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">NID</label>
+                                <input type="text" class="form-control" #nid="ngModel"
+                                    placeholder="Please Enter NID " name="nid"  [(ngModel)]="filter.nid">   
+                            </div>
+                        </div><!-- Col -->
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ration Card No.*</label>
+                                <input type="text" class="form-control" #ration="ngModel"  name="ration"
+                                    placeholder="Please Enter Ration Card No." [(ngModel)]="filter.rationCardNo" required>
+                                    <span *ngIf="ration.invalid && ration.touched">Please Enter Ration Card No.</span>
+                            </div>
+                        </div>
+                    </div><!-- Row -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" #namePlease="ngModel"  name="namePlease"
+                                    placeholder="Please Enter Name" [(ngModel)]="filter.name">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Aadhaar Card No.*</label>
+                                <input type="text" class="form-control" #aadharcard="ngModel" required name="aadharcard"
+                                minlength="12" maxlength="12" placeholder="Please Enter Aadhaar Card No." [(ngModel)]="filter.aadhaarNo">
+                                <span *ngIf="aadharcard.invalid && aadharcard.touched">Please Enter Aadhaar Card No.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Mobile No.</label>
+                                <input type="tel" class="form-control" #mobile="ngModel" name="mobilenumber"
+                                  minlength="10" maxlength="10"  placeholder="Please Enter Mobile No." [(ngModel)]="filter.mobileNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Address*</label>
+                                <input type="text" class="form-control" #address="ngModel" name="address"
+                                    placeholder="Please Enter Address" [(ngModel)]="filter.address" required>
+                                    <span *ngIf="address.invalid && address.touched">Please Enter Address</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #housenumber="ngModel"
+                                    name="housenumber" placeholder="Please Enter Ward No."
+                                    [(ngModel)]="filter.wardNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #wardname="ngModel"
+                                    name="wardname" [(ngModel)]="filter.wardName"
+                                    placeholder="Please Enter Ward Name ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">House No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #house="ngModel"
+                                    name="housenumber" placeholder="Please Enter House No."
+                                    [(ngModel)]="filter.houseNumber">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Pin Code</label>
+                                <input type="text" class="form-control" autocomplete="off" #pincode="ngModel"
+                                    name="pincode" [(ngModel)]="filter.pincode" placeholder="Please Enter Pin Code ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Post Office</label>
+                                <input type="text" class="form-control" autocomplete="off" #post="ngModel"
+                                    name="postoffice" [(ngModel)]="filter.postOffice"
+                                    placeholder="Please Enter Post Office">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Electoral Card No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #electrol="ngModel"
+                                    name="electrolCard" [(ngModel)]="filter.electoralCardNo"
+                                    placeholder="Please Enter Electoral Card No.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Income</label>
+                                <input type="text" class="form-control" autocomplete="off" #income="ngModel"
+                                    name="income" [(ngModel)]="filter.income" placeholder="Please Enter Income">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Ward Member/Councillor Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #wardmember="ngModel"
+                                    name="wardnumber" [(ngModel)]="filter.wardMember"
+                                    placeholder="Please Enter Ward Member/Councillor Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Name</label>
+                                <input type="text" class="form-control" autocomplete="off" #bankName="ngModel"
+                                    name="bankname" [(ngModel)]="filter.bankName" placeholder="Please Enter Bank Name ">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Bank Branch</label>
+                                <input type="text" class="form-control" autocomplete="off" #bankBranch="ngModel"
+                                    name="bankbranch" [(ngModel)]="filter.bankBranch"
+                                    placeholder="Please Enter Bank Branch">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">IFSC Code</label>
+                                <input type="text" class="form-control" autocomplete="off" #ifsc="ngModel"
+                                    name="ifsccode" [(ngModel)]="filter.ifsc" placeholder="Please Enter IFSC Code">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Account No.</label>
+                                <input type="text" class="form-control" autocomplete="off" #account="ngModel"
+                                    name="accountnumber" [(ngModel)]="filter.accountNumber"
+                                    placeholder="Please Enter Account No.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- radio button  -->
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Availing Pension</h5>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault1="ngModel"
+                                        value="Yes" name="flexRadioDefault1" id="flexRadioDefault1"
+                                        [(ngModel)]="filter.availingPension">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault1="ngModel" value="No"
+                                        name="flexRadioDefault1" id="flexRadioDefault1"
+                                        [(ngModel)]="filter.availingPension">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Paying IT</h5>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefaults="ngModel"
+                                        value="Yes" name="flexRadioDefaults" id="flexRadioDefault3"
+                                        [(ngModel)]="filter.payingIt">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check form-group">
+                                    <input class="form-check-input" type="radio" #flexRadioDefaults="ngModel" value="No"
+                                        name="flexRadioDefaults" id="flexRadioDefault3" [(ngModel)]="filter.payingIt">
+                                    <label class="form-check-label" for="flexRadioDefault4">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="">Possessing EPF</h5>
+                                </div>
+                                <div class="col-md-2 form-check">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault="ngModel" value="Yes"
+                                        name="flexRadioDefault" id="flexRadioDefault5"
+                                        [(ngModel)]="filter.possessingEPF">
+                                    <label class="form-check-label" for="flexRadioDefault5">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 form-check">
+                                    <input class="form-check-input" type="radio" #flexRadioDefault="ngModel" value="No"
+                                        name="flexRadioDefault" id="flexRadioDefault5"
+                                        [(ngModel)]="filter.possessingEPF">
+                                    <label class="form-check-label" for="flexRadioDefault6">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- radio button  -->
+                </form>
+                <div class="pull-right">
+                    <button type="button" (click)="cancel()" class="btn btn-primary cancel ">Cancel</button>
+                    <button type="button" [disabled]="departmentAddForm1.invalid" class="btn btn-primary submit " (click)="departmentAddForm()">Submit </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-fade-rotating" [fullScreen] = "true"><p style="color: black" > Loading... </p></ngx-spinner>

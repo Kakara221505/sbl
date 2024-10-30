@@ -1,30 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule } from "@angular/core";
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ToastrModule } from 'ngx-toastr';
 import { LayoutModule } from './views/layout/layout.module';
 import { AuthGuard } from './core/guard/auth.guard';
+
 import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './views/pages/error-page/error-page.component';
+import { HttpClientModule } from "@angular/common/http";
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { HttpClientModule } from '@angular/common/http';
-import { ToastrModule } from 'ngx-toastr';
-import { UnifiedRegistryComponent } from './views/pages/unified-registry/unified-registry.component';
-import { BlockchainModule } from './views/pages/blockchain/blockchain.module';
-import { UnifiedRegistryModule } from './views/pages/unified-registry/unified-registry.module';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { PaymentModule } from './views/pages/payment/payment.module';
-import { ExchangeModule } from './views/pages/exchange/exchange.module';
-import {AnalysisModule} from './views/pages/analysis/analysis.module'
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DataInferenceModule } from './views/pages/data-inference/data-inference.module';
-
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    UnifiedRegistryComponent
-   
   ],
   imports: [
     BrowserModule,
@@ -32,15 +23,10 @@ import { DataInferenceModule } from './views/pages/data-inference/data-inference
     BrowserAnimationsModule,
     LayoutModule,
     HttpClientModule,
-    BlockchainModule,
-    UnifiedRegistryModule,
+    NgxSpinnerModule,
     ToastrModule.forRoot(),
-    PaymentModule,
-    ExchangeModule,
-    NgxPaginationModule,
-    AnalysisModule,
-    NgbModule,
-    DataInferenceModule
+    
+    
   ],
   providers: [
     AuthGuard,
@@ -59,4 +45,3 @@ import { DataInferenceModule } from './views/pages/data-inference/data-inference
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

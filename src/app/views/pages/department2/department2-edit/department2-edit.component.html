@@ -1,0 +1,358 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Property Tax Scheme: Edit Details</h6>
+                <form #departmentAddForm2="ngForm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" #citys="ngModel"
+                                    placeholder="Please Enter CIty " name="citys"  [(ngModel)]="filter.city">   
+                            </div>
+                        </div><!-- Col -->
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">House / Shop No</label>
+                                <input type="text" class="form-control" #houseOrShopNos="ngModel"  name="filter.houseOrShopNos"
+                                    placeholder="Please Enter House Or ShopNo." [(ngModel)]="filter.houseOrShopNo" required>
+                                    <!-- <span *ngIf="houseOrShopNo.invalid && houseOrShopNo.touched">Please Enter Ration Card No.</span> -->
+                            </div>
+                        </div>
+                    </div><!-- Row -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Building Or Colony Name</label>
+                                <input type="text" class="form-control" name="buildingOrColonyNames" #buildingOrColonyNames="ngModel" [(ngModel)]="filter.buildingOrColonyName">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Street Name</label>
+                                <input type="text" class="form-control" name="streetNames" #streetNames="ngModel" [(ngModel)]="filter.streetName">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Locality Or Mohalla</label>
+                                <input type="text" class="form-control" #localityOrMohallas="ngModel"  name="localityOrMohallas"
+                                    placeholder="Please Enter Locality Or Mohalla" [(ngModel)]="filter.localityOrMohalla">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Pin Code</label>
+                                <input type="number" class="form-control" #pincodes="ngModel"  name="pincodes"
+                                    placeholder="Please Enter Pincode" [(ngModel)]="filter.pincode">
+                                 
+                            </div>
+                        </div>
+                       
+                      
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Existing Property</label>
+                                <input type="text" class="form-control" #propertyIds="ngModel"  name="propertyIds"
+                                    placeholder="Please Enter property" [(ngModel)]="filter.propertyId">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Survey ID / UID</label>
+                                <input type="number" class="form-control" #surveyIds="ngModel"  name="surveyIds"
+                                    placeholder="Please Enter Survey" [(ngModel)]="filter.surveyId">
+                                 
+                            </div>
+                        </div>
+                       
+        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Year Of Creation Of Property</label>
+                                <input type="date" class="form-control" #yearOfCreationOfPropertys="ngModel"  name="yearOfCreationOfPropertys"
+                                    placeholder="Please Enter Year Of Creation Of Property" [(ngModel)]="filter.yearOfCreationOfProperty">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Property Usage Type</label>
+                                <input type="text" class="form-control" #types="ngModel"  name="types"
+                                    placeholder="Please Enter Type" [(ngModel)]="filter.type">
+                                 
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Property Type</label>
+                                <input type="text" class="form-control" #propertyTypes="ngModel"  name="propertyTypes"
+                                    placeholder="Please Enter propertyType" [(ngModel)]="filter.propertyType">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Vasika No</label>
+                                <input type="number" class="form-control" #vasikaNos="ngModel"  name="vasikaNos"
+                                    placeholder="Please Enter VasikaNo" [(ngModel)]="filter.vasikaNo">
+                                 
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Vasika Date</label>
+                                <input type="date" class="form-control" #vasikaDates="ngModel"  name="vasikaDates"
+                                    placeholder="Please Enter vasikaDate" [(ngModel)]="filter.vasikaDate">
+                                 
+                            </div>
+                        </div>
+                      
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Allotment Number</label>
+                                <input type="number" class="form-control" #allotmentNos="ngModel"  name="allotmentNos"
+                                    placeholder="Please Enter Allotment No" [(ngModel)]="filter.allotmentNo">
+                                 
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Allotment Date</label>
+                                <input type="date" class="form-control" #allotmentDates="ngModel"  name="allotmentDates"
+                                    placeholder="Please Enter Allotment Date" [(ngModel)]="filter.allotmentDate">
+                                 
+                            </div>
+                        </div>
+                      
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Business Name</label>
+                                <input type="text" class="form-control" #businessNames="ngModel"  name="businessNames"
+                                    placeholder="Please Enter Business Name" [(ngModel)]="filter.businessName">
+                                 
+                            </div>
+                        </div>
+                       
+                    </div>    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Inflammable Material Stored</label>
+                                <select class="form-control" #inflammableMaterialStoredInYourPropertys="ngModel" name="inflammableMaterialStoredInYourPropertys" [(ngModel)]="filter.inflammableMaterialStoredInYourProperty">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Height of property less than 36 ft</label>
+                                <select class="form-control" #propertyMoreThan36FTs="ngModel" name="propertyMoreThan36FTs" [(ngModel)]="filter.propertyMoreThan36FT">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Plot Size (SQ. YARDS)</label>
+                                <input type="text" class="form-control" #yard="ngModel"  name="yard"
+                                    placeholder="Please Enter yards" [(ngModel)]="filter.yards">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Type Of OwnerShip</label>
+                                <input type="text" class="form-control" #ownerShips="ngModel"  name="ownerShips"
+                                    placeholder="Please Enter OwnerShip" [(ngModel)]="filter.ownerShip">
+                                 
+                            </div>
+                        </div>
+                      
+                    </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Name Of Owner</label>
+                                <input type="text" class="form-control" #nameOfOwners="ngModel"  name="nameOfOwners"
+                                    placeholder="Please Enter Name Of Owner" [(ngModel)]="filter.nameOfOwner">
+                                 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Gender</label>
+                                <select class="form-control" #genders="ngModel" name="genders" [(ngModel)]="filter.gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Mobile No</label>
+                                <input type="tel" class="form-control" #mobileNos="ngModel" name="mobileNos"
+                                  minlength="10" maxlength="10"  placeholder="Please Enter Mobile No." [(ngModel)]="filter.mobileNo">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Guardian Name</label>
+                                <input type="text" class="form-control" #guardianNames="ngModel"  name="guardianNames"
+                                    placeholder="Please Enter Guardian Name" [(ngModel)]="filter.guardianName">
+                                 
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Relationship</label>
+                                <input type="text" class="form-control" #relationships="ngModel" name="relationships"
+                                   placeholder="Please Enter Relationship" [(ngModel)]="filter.relationship">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Special Category</label>
+                                <select class="form-control" #specialCategorys="ngModel" name="specialCategorys" [(ngModel)]="filter.specialCategory">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Email Id</label>
+                                <input type="text" class="form-control" #emailIds="ngModel" name="emailIds"
+                                   placeholder="Please Enter Email Id" [(ngModel)]="filter.emailId">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Owner Ship Percentage</label>
+                                <input type="text" class="form-control" #ownershipPercentages="ngModel"  name="ownershipPercentages"
+                                    placeholder="Please Enter OwnershipPercentage" [(ngModel)]="filter.ownershipPercentage">                                
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Registered Will</label>
+                                <input type="text" class="form-control" #registeredWills="ngModel" name="registeredWills"
+                                   placeholder="Please Enter Registered Will" [(ngModel)]="filter.registeredWill">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Aadhaar Card No</label>
+                                <input type="text" class="form-control" #aadharcards="ngModel" required name="aadharcards"
+                                minlength="12" maxlength="12" placeholder="Please Enter Aadhaar Card No." [(ngModel)]="filter.aadhaarNo">
+                                <!-- <span *ngIf="aadharcard.invalid && aadharcard.touched">Please Enter Aadhaar Card No.</span> -->
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Address Proof</label>
+                                <div class="input-group">
+                                    <div class="custom-file" *ngIf="enableAddressFormEdit">
+                                        <input type="file" class="custom-file-input" #addressProof="ngModel" name="addressProof"
+                                            accept=".jpg, .jpeg, .png, .pdf" [(ngModel)]="filter.addressProof" (change)="onFileSelected($event, 'addressProof')">
+                                    </div>
+                                </div>
+                                
+                                <button  class="btn btn-primary mt-2" (click)="downloadDocument(department2Data.addressProof)">
+                                    <i class="bi bi-download"></i> Download Address Proof
+                                </button>
+                                
+                                <button  style="margin-left: 13px;"  class="btn btn-primary mt-2 ml-2" (click)="enableAddressProofEdit()">
+                                    <i class="bi bi-pencil"></i> Change
+                                </button>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">                 
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Usage Proof</label>
+                                <div class="input-group">
+                                    <div class="custom-file" *ngIf="enableUseFormEdit">
+                                        <input type="file" class="custom-file-input" #usageProof="ngModel" name="usageProof"
+                                            accept=".jpg, .jpeg, .png, .pdf" [(ngModel)]="filter.usageProof" (change)="onFileSelected($event, 'usageProof')">
+                                    </div>
+                                </div>
+                                
+                                <button  class="btn btn-primary mt-2" (click)="downloadDocument(department2Data.usageProof)">
+                                    <i class="bi bi-download"></i> Download Usage Proofs
+                                </button>
+                                
+                                <button  style="margin-left: 13px;"  class="btn btn-primary mt-2 ml-2" (click)="enableUseProofEdit()">
+                                    <i class="bi bi-pencil"></i> Change
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3 form-group">
+                                <label class="form-label">Remark</label>
+                                <input type="text" class="form-control" #remarks="ngModel"  name="remarks"
+                                    placeholder="Please Enter Remark" [(ngModel)]="filter.remark">
+                                 
+                            </div>
+                        </div>
+                                    
+                    </div> 
+                </form>
+                <div class="pull-right">
+                    <button type="button" (click)="cancel()" class="btn btn-primary cancel ">Cancel</button>
+                    <button type="button" class="btn btn-primary submit"  (click)="department2EditForm()">Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-spin-fade-rotating" [fullScreen]="true">
+    <p style="color: black"> Loading... </p>
+</ngx-spinner>

@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Department 1 Database
+                   
+                    <button type="button" (click)="add()" class="btn btn-primary pull-right initial">
+                        <i class="icons" data-feather="plus-circle" appFeatherIcon></i>Add New</button>
+                    <button type="button" (click)="migrate()" class="btn btn-primary pull-right initial">
+                        Migrate</button>
+                    <button type="button" class="btn btn-primary pull-right initial" (click)="initialMigrate()" [disabled]="initialStatus">
+                        Initial Migration</button>
+                </h6>
+                <div class="table-responsive table-striped">
+                    <table id="dataTableExample" class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NID</th>
+                                <th>Ration Card No.</th>
+                                <th>Name</th>
+                                <th>Aadhaar No.</th>
+                                <th>Mobile No.</th>
+                                <!-- <th>Address</th> -->
+                                <!-- <th>Ward Number</th>
+                                <th>Ward Name</th> -->
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let list of departmentList">
+                                <td>{{list.id}}</td>
+                                <td>{{list.nid}}</td>
+                                <td>{{list.rationCardNo}}</td>
+                                <td>{{list.name}}</td>
+                                <td>{{list.aadhaarNo}}</td>
+                                <td>{{list.mobileNumber}}</td>
+                                <!-- <td>{{list.address}}</td> -->
+                                <!-- <td>{{list.wardNumber}}</td>
+                                <td>{{list.wardName}}</td> -->
+                                <td>
+                                    <button type="submit" id="view" class="btn btn-success mr-2 mb-2 mb-md-0"
+                                    [routerLink]="['../view',list.id]"><i data-feather="eye"
+                                        appFeatherIcon></i> View</button>
+                                    <button type="submit" id="edit" class="btn btn-info mr-2 mb-2 mb-md-0"
+                                        [routerLink]="['../edit', list.id]"><i
+                                            class="bi bi-pen"></i>Edit</button>
+                                       <button class="btn btn-danger mr-2 mb-2 mb-md-0" (click)="openBasicModal(basicModal)">Delete</button>
+                                       <ng-template #basicModal let-modal>
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Delete Data</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form #upload="ngForm">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="control-label">Do you want to delete the data?</label>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">No</button>
+                                                    <button type="button"  class="btn btn-success mr-2 mb-2 mb-md-0" (click)="deleteFile(list.id)">Yes </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-spin-fade-rotating" [fullScreen]="true">
+        <p style="color: black"> Loading... </p>
+    </ngx-spinner>
+ 

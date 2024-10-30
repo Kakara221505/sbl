@@ -30,7 +30,7 @@
     
           <a class="nav-link" *ngIf="hasItems(item)" href="javascript:void(0);">
             <i class="link-icon" [attr.data-feather]="item.icon" appFeatherIcon *ngIf="item.icon"></i>
-            <span class="link-title"> {{ item.label }} </span>
+            <span class="link-title"> {{ item.label }}</span>
             <span class="link-arrow" data-feather="chevron-down" appFeatherIcon></span>
           </a>
     
@@ -46,7 +46,7 @@
             <li class="nav-item" *ngFor="let subitem of item.subItems" [ngClass]="{'side-nav-item': hasItems(subitem)}">
               <a class="nav-link side-nav-link-a-ref" *ngIf="hasItems(subitem)" href="javascript:void(0);">
                 <i class="link-icon" [attr.data-feather]="subitem.icon" appFeatherIcon *ngIf="subitem.icon"></i>
-                <span class="link-title"> {{ subitem.label }} 3</span>
+                <span class="link-title"> {{ subitem.label }}</span>
                 <span class="link-arrow" data-feather="chevron-down" appFeatherIcon></span>
               </a>
     
@@ -61,7 +61,7 @@
                   <a class="nav-link nav-link-ref" [routerLink]="subSubitem.link" [routerLinkActive]="['active']"
                     [attr.data-parent]="subSubitem.parentId">
                     <i class="link-icon" [attr.data-feather]="subitem.icon" appFeatherIcon *ngIf="subitem.icon"></i>
-                    {{ subSubitem.label }} 5
+                    {{ subSubitem.label }}
                   </a>
                 </li>
               </ul>

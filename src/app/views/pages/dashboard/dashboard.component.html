@@ -1,0 +1,136 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+  <div>
+    <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-xl-12 stretch-card">
+    <div class="row flex-grow-1">
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Users Information</h6>
+              <div ngbDropdown class="mb-2">
+                <button type="button" class="btn  btn-primary me-2 mb-2 mb-md-0 " [routerLink]="['/piidata']">View All</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-12 col-xl-12">
+                <table id="dataTableExample" class="table">
+                  <thead>
+                      <tr>
+                          <th>Aadhaar No.</th>
+                          <!-- <th>UUID</th> -->
+                          <!-- <th>UUID.</th> -->
+                          <th>Name</th>
+                          <!-- <th>Department</th> -->
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let list of allData">
+                          <th>{{list.aadhaarNo}}</th>
+                          <!-- <th>{{list.uuid}}</th> -->
+                          <!-- <th>{{list.uuid}}</th> -->
+                          <th>{{list.name}}</th>
+                          <!-- <th>{{list.department}}</th> -->
+                          <th>{{list.status}}</th>
+                      <tr>
+                  </tbody>
+              </table>
+              </div>
+              <div class="col-6 col-md-12 col-xl-7">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h6 class="card-title mb-0">Reward Tokens</h6>
+              
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-12 col-xl-12">
+                <p>You can use these reward tokens to avail goverment services</p>
+              </div>
+              <div class="col-12 col-md-12 col-xl-12 tokensvalue">
+                <h4><span class="userToken">{{userToken}} </span> Token </h4>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12" *ngIf="userToken != 0">
+                <button type="button" class="btn btn-primary pull-right" [routerLink]="['/piidata/Redeem']">Redeem</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div> 
+
+<div class="row">
+  <div class="col-md-12 stretch-card">
+      <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Data Verification Request</h6>
+          </div>
+          <div class="table-responsive table-striped">
+            <table id="dataTableExample" class="table">
+                <thead>
+                    <tr>
+                      
+                        <th>Request From</th>
+                        <th>Request to </th>
+                        <th>Document Type</th>
+                        <th>Date Of Request</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let list of dataExchangeRequestList">
+                    
+                    <td>{{ mapDepartmentName(list.requestedFrom) }}</td>
+                    <td>{{ mapDepartmentName(list.requestedFor) }}</td>                                     
+                    <td>{{list.documentType}}</td>
+                    <td>{{list.date | date:'mediumDate'}}</td>
+                    <td >
+                      <button *ngIf="list.status == 'Pending'" class="btn btn-primary mr-2 mb-2 mb-md-0" (click)="statusForUser(list.dataId)" >Approve</button>
+                      <button *ngIf="list.status == 'Pending'" class="btn btn-danger mr-2 mb-2 mb-md-0" (click)="openBasicModal(basicModal)">Reject</button>
+                      <ng-template #basicModal let-modal>
+                        <div class="modal-header">
+                          <h5 class="modal-title electricity" id="exampleModalLabel">Reason For Rejection </h5>
+                          <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form #paymentForm="ngForm">
+                          <div class="modal-body">
+                            <div class="col-12 col-md-12 col-xl-12">
+                              <label  for="amount">Please give the reason for rejecting this data exchange request.</label><br>
+                              <input type="text" class="form-control reason" autocomplete="off" #commentReason="ngModel"
+                              name="commentReason" [(ngModel)]="comment"
+                              placeholder="Please give the reason">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Cancel</button>
+                            <button type="button" class="btn btn-danger" (click)="statusForUserDecline(list.dataId)">Reject</button>
+                          </div>
+                        </form>
+                      </ng-template>
+                      
+                      <h6 *ngIf="list.status != 'Pending'">{{list.status}}</h6>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+      </div>
+  </div>
+</div> 
+

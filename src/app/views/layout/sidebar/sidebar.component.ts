@@ -149,26 +149,18 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   resetMenuItems() {
 
     const links = document.getElementsByClassName('nav-link-ref');
-    console.log("Mohit")
+    
     for (let i = 0; i < links.length; i++) {
       const menuItemEl = links[i];
       menuItemEl.classList.remove('mm-active');
       const parentEl = menuItemEl.parentElement;
 
-      console.log("menuItemsEl", menuItemEl);
-
       if (parentEl) {
           parentEl.classList.remove('mm-active');
-          //parentEl.classList.add('mm-active');
           const parent2El = parentEl.parentElement;
-
-          console.log("P1: ", parentEl);
           
           if (parent2El) {
             parent2El.classList.remove('mm-show');
-            parent2El.classList.add('mm-show');
-            parent2El.classList.add('mm-active');
-            console.log("P2: ", parent2El);
           }
 
           const parent3El = parent2El?.parentElement;
@@ -212,8 +204,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         if (window.location.pathname === links[i]['pathname']) {
           
             menuItemEl = links[i];
-            console.log(window.location.pathname)
-            console.log(links[i]['pathname'])
+            
             break;
         }
     }

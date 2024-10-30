@@ -186,7 +186,9 @@ import {NgbDate, NgbCalendar, NgbDateParserFormatter} from '@ng-bootstrap/ng-boo
   templateUrl: './datepicker.component.html'
 })
 export class DatepickerComponent {
+
   hoveredDate: NgbDate | null = null;
+
   fromDate: NgbDate | null;
   toDate: NgbDate | null;
 

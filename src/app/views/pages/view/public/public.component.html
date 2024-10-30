@@ -1,0 +1,131 @@
+<div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+  <div class="row Public">
+    <div class="col-md-12">
+      <h4 class="col-md-12">Public Service Portal
+        <button type="button" (click)="back()" class="btn btn-primary " style="float: right;">Back</button>
+      </h4>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8 col-xl-8 stretch-card">
+    <div class="row flex-grow-1">
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h5 class="card-title mb-0 electricity">Electricity Bill</h5>
+            </div>
+            <div class="row" *ngIf="electricity != 0">
+              <div class="col-6 col-md-12 col-xl-12 collected">
+                <p>You have an electricity bill of :</p>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 rupees">
+                <h4>₹{{electricity}}</h4>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 paybtn">
+                <button class="btn btn-primary" (click)="openBasicModal(basicModal)">Redeem Token & Pay The Balance</button>
+              </div>
+            </div>
+            <div class="row"  *ngIf="electricity == 0">
+              <div class="col-6 col-md-12 col-xl-12 collected">
+                <p>You have an electricity bill of :</p>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 rupees">
+                <h4>₹{{electricity}}</h4>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 paybtn">
+                <button class="btn btn-primary" disabled>Redeem Token & Pay The Balance</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h5 class="card-title mb-0 electricity">Water Bill</h5>
+            </div>
+            <div class="row" *ngIf="water != 0">
+              <div class="col-6 col-md-12 col-xl-12 collected">
+                <p>You have a water bill of : </p>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 rupees">
+                <h4>₹{{water}}</h4>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 paybtn">
+                <button class="btn btn-primary" (click)="openBasicModal(basicModal1)">Redeem Token & Pay The Balance</button>
+              </div>
+            </div>
+            <div class="row"  *ngIf="water == 0">
+              <div class="col-6 col-md-12 col-xl-12 collected">
+                <p>You have a water bill of : </p>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 rupees">
+                <h4>₹{{water}}</h4>
+              </div>
+              <div class="col-6 col-md-12 col-xl-12 paybtn">
+                <button class="btn btn-primary" disabled>Redeem Token & Pay The Balance </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #basicModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title electricity" id="exampleModalLabel">Electricity Bill</h5>
+    <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form #paymentForm="ngForm">
+    <div class="modal-body">
+      <div class="col-12 col-md-12 col-xl-12">
+        <p class="font-para">Your Electricity Bill : <span class="Bold">₹100.00</span></p>
+        <p>Your Total Tokens Available : <span class="Bold">{{userToken}}</span> </p>
+        <p>Token Exchange Rate : <span class="Bold">{{userTokenValue}} Tokens = ₹1.00 </span> </p>
+        <p class="font-para">Your Token Value : <span class="Bold"> ₹{{user | number:'0.2-3'}} </span></p>
+      </div>
+      <div class="col-12 col-md-12 col-xl-12">
+        <label  for="amount">Balance Amount</label><br>
+        <p  class="amount-input">₹{{electricityRemaining}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Cancel</button>
+      <button type="button" class="btn btn-primary payButton" (click)="payment()">Pay</button>
+    </div>
+  </form>
+</ng-template>
+<ng-template #basicModal1 let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title electricity" id="exampleModalLabel">Water Bill</h5>
+    <button type="button" class="close" (click)="modal.close('by: close icon')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form #paymentForm="ngForm">
+    <div class="modal-body">
+      <div class="col-12 col-md-12 col-xl-12">
+        <p class="font-para">Your Water Bill : <span class="Bold">₹50.00</span></p>
+        <p>Your Total Tokens Available : <span class="Bold">{{userToken}}</span> </p>
+        <p>Token Exchange Rate : <span class="Bold">{{userTokenValue}} Tokens = ₹1.00 </span> </p>
+        <p class="font-para">Your Token Value : <span class="Bold"> ₹{{user | number:'0.2-3'}} </span></p>
+      </div>
+      <div class="col-12 col-md-12 col-xl-12">
+        <label for="amount">Balance Amount</label><br>
+          <p  class="amount-input">₹{{waterRemaining}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Cancel</button>
+      <button type="button" class="btn btn-primary payButton" (click)="paymentWater()">Pay</button>
+    </div>
+  </form>
+</ng-template>

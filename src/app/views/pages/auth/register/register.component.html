@@ -2,40 +2,28 @@
   <div class="col-md-8 col-xl-6 mx-auto">
     <div class="card">
       <div class="row">
-        <div class="col-md-4 pe-md-0">
-          <div class="auth-side-wrapper" [ngStyle]="{ 'background-image': 'url(https://via.placeholder.com/219x452)' }">
-
-          </div>
-        </div>
         <div class="col-md-8 ps-md-0">
           <div class="auth-form-wrapper px-4 py-5">
-            <a routerLink="." class="nobleui-logo d-block mb-2">Noble<span>UI</span></a>
-            <h5 class="text-muted fw-normal mb-4">Create a free account.</h5>
-            <form class="forms-sample">
-              <div class="mb-3">
-                <label for="exampleInputUsername1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="Username" placeholder="Username">
+            <a routerLink="." class="nobleui-logo d-block mb-2"><span>User Signup</span></a>
+            <h5 class="text-muted fw-normal mb-4">Create a account.</h5>
+            <form #myform="ngForm">
+              <div class="mb-3  form-group">
+                <label for="exampleInputUsername1" class="form-label">Aadhar No.</label>
+                <input type="number"class="form-control" id="exampleInputUsername1"autocomplete="Username" 
+                placeholder="Aadhar Number" name="aadhaar" maxlength="10"[(ngModel)]="aadhaar" #NumberAadhar="ngModel">
               </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              <div class="mb-3  form-group">
+                <label for="exampleInputEmail1" class="form-label">User Id</label>
+                <input type="text" class="form-control" placeholder="UserId" name="user" [(ngModel)]="userId" #idUser="ngModel">
               </div>
-              <div class="mb-3">
+              <div class="mb-3  form-group">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="current-password" placeholder="Password">
-              </div>
-              <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="authCheck">
-                <label class="form-check-label" for="authCheck">
-                  Remember me
-                </label>
+                <input type="password" class="form-control" id="exampleInputPassword1"  autocomplete="current-password" name="pass"
+                  placeholder="Password" [(ngModel)]="password" #wordPass="ngModel">
               </div>
               <div>
-                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" (click)="onRegister($event)">Sign up</button>
-                <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
-                  <i class="feather icon-twitter btn-icon-prepend"></i>
-                  Sign up with twitter
-                </button>
+                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" (click)="onRegister(myform)">Sign
+                  up</button>
               </div>
               <a routerLink="/auth/login" class="d-block mt-3 text-muted">Already a user? Sign in</a>
             </form>

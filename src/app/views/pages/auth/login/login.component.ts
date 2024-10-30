@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup,
+import {
+  FormGroup,
   FormControl,
   Validators,
-  FormBuilder,} from '@angular/forms'
-import{AuthService} from '../../../pages/service/auth/auth.service'
+  FormBuilder,
+} from "@angular/forms";
+import { AuthService } from 'src/app/views/pages/services/auth/auth.service';
 import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,11 +16,12 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   user = {
-    email: "",
-    password: "",
+    aadhaarNo: "",
+    otp: "",
   };
   returnUrl: any;
-  constructor(private router: Router, private route: ActivatedRoute,private authService:AuthService,private toastr: ToastrService) { }
+
+  constructor(private router: Router, private route: ActivatedRoute, private authService:AuthService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     // get return url from route parameters or default to '/'
@@ -25,18 +29,17 @@ export class LoginComponent implements OnInit {
   }
   onLoggedin(myform:any) {
     let body = {
-      email: this.user.email,
-      password: this.user.password,
+      aadhaarNo: this.user.aadhaarNo,
+      otp: this.user.otp,
     };
-    this.authService.unifiedLogin(body).subscribe((data: any) => {
-      console.log(data.data.token);
-      // localStorage.setItem('Token', data.data.Token);
+    this.authService.userLogin(body).subscribe((data: any) => {
       localStorage.setItem('token',data.data.token);
-      this.router.navigate(["/sftp/list"]);           
+      // this.router.navigateByUrl("/dashboard");
+      window.location.href = "/dashboard"
     },error =>{
-      this.toastr.error("login id and password is incorrect ",`Error`)
-     });
-    
-  }
+      this.toastr.error(error.error.message,`Error`)
+      console.log(error)
+      });
+}
 
 }

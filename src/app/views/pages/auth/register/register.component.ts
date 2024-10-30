@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from "@angular/forms";
+import { AuthService } from 'src/app/views/pages/services/auth/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,17 +14,25 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private router: Router) { }
+    aadhaar:any
+    userId: any
+    password: any
+  returnUrl: any;
+
+  constructor(private router: Router,private route: ActivatedRoute, private authService:AuthService) { }
 
   ngOnInit(): void {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  onRegister(e: Event) {
-    e.preventDefault();
-    localStorage.setItem('isLoggedin', 'true');
-    if (localStorage.getItem('isLoggedin')) {
-      this.router.navigate(['/']);
-    }
-  }
-
+  onRegister(myform: any) {
+    let body = {
+      aadhaar:this.aadhaar,
+      userId: this.userId,
+      password: this.password,
+    };
+    this.authService.userSignup(body).subscribe((data: any) => {
+      this.router.navigate(["/dashboard"]);
+});
+ }
 }

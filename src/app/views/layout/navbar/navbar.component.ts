@@ -31,15 +31,12 @@ export class NavbarComponent implements OnInit {
    */
   onLogout(e: Event) {
     e.preventDefault();
-    localStorage.removeItem('isLoggedin');
+    localStorage.removeItem('token');
 
-    if (!localStorage.getItem('isLoggedin')) {
+
+    if (!localStorage.getItem('token')) {
       this.router.navigate(['/auth/login']);
     }
   }
-  navigateToConfiguration(event: Event) {
-    event.preventDefault(); // Prevent default action
-    this.router.navigate(['/setting/configuration']); // Navigate to the configuration page
-  }  
 
 }

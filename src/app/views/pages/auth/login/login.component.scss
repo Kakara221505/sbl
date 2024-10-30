@@ -1,0 +1,25 @@
+:host {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img{
+  padding: 52px;
+  margin-top: 40%;
+  width: 100%;
+}
+
+.mb-3{
+  width: 27rem !important;
+}
+button{ 
+  width: 10rem !important;
+}
+.card-title{
+  margin-top: 20px !important;
+ margin-left:20px;
+  margin-bottom: -30px !important;
+  font-size: 30px !important;
+  font-weight: 500;
+}

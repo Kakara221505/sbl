@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Food And Supplies Department JSON</h6>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let list of department1JsonList">
+                <th>{{list}}</th>
+                <th>
+                  <button type="button" class="btn btn-info" (click)="downloadFileDepartment1(list)">Download</button>
+                 
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Local Government JSON</h6>
+
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let list of departmentJsonList">
+                <th>{{list}}</th>
+                <th> <button type="button" class="btn btn-info" (click)="downloadFileDepartment2(list)">Download</button>
+                
+                </th>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: black">Loading...</p>
+</ngx-spinner>

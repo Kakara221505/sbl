@@ -1,0 +1,902 @@
+<div class="row">
+  <div class="col-md-12 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6>
+          Blockchain Data
+          <button
+            class="btn btn-primary pull-right"
+            type="submit"
+            (click)="back()"
+          >
+            Back
+          </button>
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row piiData">
+  <div class="col-md-12 stretch-card">
+    <div class="card venuesCss">
+      <div class="card-body">
+        <h6 class="card-title">Blockchain</h6>
+        <div class="table-responsive">
+          <table id="dataTableExample" class="table">
+            <thead>
+              <tr>
+                <th>Aadhaar No.</th>
+                <!-- <th>Mobile No.</th> -->
+                <th>Name</th>
+                <!-- <th>EID</th> -->
+                <th>UUID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ allBlockdataAadhar?.aadhaarNo }}</td>
+                <!-- <td>{{ allBlockdataAadhar.mobileNumber }}</td> -->
+                <td>{{ allBlockdataAadhar?.name }}</td>
+                <!-- <td>{{ allBlockdataAadhar.nid }}</td> -->
+                <td>{{ allBlockdataAadhar?.userUuid }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="row piiData" *ngIf="addressMatched">
+  <div class="col-md-12 stretch-card">
+    <div class="card venuesCss">
+      <div class="card-body">
+        <h6 class="card-title">Information</h6>
+
+        <div class="row">
+          <div class="col-md-3">
+              <h6>Age</h6>
+              <p>{{nonPiidata1Aadhar?.age}}</p>
+          </div>
+          <!-- <div class="col-md-3">
+              <h6>Member Name</h6>
+              <p>{{memberName}}</p>
+          </div> -->
+          <div class="col-md-3">
+            <h6>District</h6>
+            <p>{{nonPiidata1Aadhar.district}}</p>
+        </div>
+       
+      
+        <div class="col-md-3">
+          <h6>Block</h6>
+          <p>{{nonPiidata1Aadhar.block}}</p>
+      </div>
+          <div class="col-md-3">
+              <h6>Mother's Name</h6>
+              <p>{{nonPiidata1Aadhar.motherName}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Relationship with Head of Family</h6>
+              <p>{{nonPiidata1Aadhar.relationshipWithHeadOfFamily}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Date of Birth</h6>
+              <p>{{nonPiidata1Aadhar.dateOfbirth}}</p>
+          </div>
+         
+          <div class="col-md-3">
+              <h6>Nationality</h6>
+              <p>{{nonPiidata1Aadhar.nationality}}</p>
+          </div>
+          <div class="col-md-3">
+            <h6>State</h6>
+            <p>{{nonPiidata1Aadhar.state}}</p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Occupation</h6>
+              <p>{{nonPiidata1Aadhar.occupation}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Document Type</h6>
+              <p>{{nonPiidata1Aadhar.documentType}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Document Issue Date</h6>
+              <p>{{nonPiidata1Aadhar.documentIssueDate}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Document Number</h6>
+              <p>{{nonPiidata1Aadhar.documentNumber}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>MNREGA</h6>
+              <p>{{nonPiidata1Aadhar.mnrega}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>MNREGA Card No.</h6>
+              <p>{{nonPiidata1Aadhar.mnregaCardNo}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Critical Illness</h6>
+              <p>{{nonPiidata1Aadhar.criticalIllness}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Critical Illness Type</h6>
+              <p>{{nonPiidata1Aadhar.criticalIllnessType}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Critical Illness Since</h6>
+              <p>{{nonPiidata1Aadhar.criticalIllnessSince}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Caste Type</h6>
+              <p>{{nonPiidata1Aadhar.casteType}}</p>
+          </div>
+          <!-- <div class="col-md-3">
+              <h6>Birth Certificate</h6>
+              <p>{{nonPiidata1Aadhar.birthCertificate}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Critical Illness Certificate</h6>
+              <p>{{nonPiidata1Aadhar.criticalIllnessCertificate}}</p>
+          </div> -->
+          <div class="col-md-3">
+            <h6>Relationship</h6>
+            <p>{{nonPiidata2Aadhar.relationship}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Special Category</h6>
+            <p>{{nonPiidata2Aadhar.specialCategory1}}</p>
+           
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Any Disability</h6>
+              <p>{{nonPiidata1Aadhar.anyDisability}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Disability Type</h6>
+              <p>{{nonPiidata1Aadhar.disabilityType}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Disability Cause</h6>
+              <p>{{nonPiidata1Aadhar.disabilityCause}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Disability Percentage</h6>
+              <p>{{nonPiidata1Aadhar.disabilityPercentage}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Special Category</h6>
+              <p>{{nonPiidata1Aadhar.specialCategory}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Bank Name</h6>
+              <p>{{nonPiidata1Aadhar.bankName}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Bank District</h6>
+              <p>{{nonPiidata1Aadhar.bankDistrict}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Bank State</h6>
+              <p>{{nonPiidata1Aadhar.bankState}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Bank Account Number</h6>
+              <p>{{nonPiidata1Aadhar.bankAccountNumber}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Branch Name</h6>
+              <p>{{nonPiidata1Aadhar.branchName}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Card Type</h6>
+              <p>{{nonPiidata1Aadhar.cardType}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>House No.</h6>
+              <p>{{nonPiidata1Aadhar.houseNo}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>House Name</h6>
+              <p>{{nonPiidata1Aadhar.houseName}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Landmark</h6>
+              <p>{{nonPiidata1Aadhar.lankmark}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Locality</h6>
+              <p>{{nonPiidata1Aadhar.locality}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Colony</h6>
+              <p>{{nonPiidata1Aadhar.colony}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Village</h6>
+              <p>{{nonPiidata1Aadhar.village}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Town Name</h6>
+              <p>{{nonPiidata1Aadhar.townName}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Taluka</h6>
+              <p>{{nonPiidata1Aadhar.taluka}}</p>
+          </div>
+          <div class="col-md-3">
+              <h6>Tehsil</h6>
+              <p>{{nonPiidata1Aadhar.tehsil}}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3">
+              <h6>Sub-District</h6>
+              <p>{{nonPiidata1Aadhar.subDistrict}}</p>
+          </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+            <h6>City</h6>
+            <p>{{nonPiidata2Aadhar.city}}</p> 
+        </div>
+        <div class="col-md-3">
+            <h6>House/Shop No.</h6>
+            <p>{{nonPiidata2Aadhar.houseOrShopNo}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Building/Colony Name</h6>
+            <p>{{nonPiidata2Aadhar.buildingOrColonyName}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Street Name</h6>
+            <p>{{nonPiidata2Aadhar.streetName}}</p>
+        </div>    
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <h6>Locality/Mohalla</h6>
+        <p>{{nonPiidata2Aadhar.localityOrMohalla}}</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Address</h6>
+      <p>{{nonPiidata2Aadhar.address}}</p>
+  </div>
+    <div class="col-md-3">
+        <h6>Property ID</h6>
+        <p>{{nonPiidata2Aadhar.propertyId}}</p>
+    </div>
+    <div class="col-md-3">
+        <h6>Survey ID</h6>
+        <p>{{nonPiidata2Aadhar.surveyId}}</p>
+    </div>
+        </div>
+        
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Year of Creation of Property</h6>
+            <p>{{nonPiidata2Aadhar.yearOfCreationOfProperty}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Type</h6>
+            <p>{{nonPiidata2Aadhar.type}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Property Type</h6>
+            <p>{{nonPiidata2Aadhar.propertyType}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Vasika No.</h6>
+            <p>{{nonPiidata2Aadhar.vasikaNo}}</p>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Vasika Date</h6>
+            <p>{{nonPiidata2Aadhar.vasikaDate}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Allotment No.</h6>
+            <p>{{nonPiidata2Aadhar.allotmentNo}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Allotment Date</h6>
+            <p>{{nonPiidata2Aadhar.allotmentDate}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Business Name</h6>
+            <p>{{nonPiidata2Aadhar.businessName}}</p>
+        </div>
+       
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Remark</h6>
+            <p>{{nonPiidata2Aadhar.remark}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Inflammable Material Stored</h6>
+            <p>{{nonPiidata2Aadhar.inflammableMaterialStoredInYourProperty}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Property More Than 36FT</h6>
+            <p>{{nonPiidata2Aadhar.propertyMoreThan36FT}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Yards</h6>
+            <p>{{nonPiidata2Aadhar.yards}}</p>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h6>Ownership</h6>
+            <p>{{nonPiidata2Aadhar.ownerShip}}</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Registered Will</h6>
+          <p>{{nonPiidata2Aadhar.registeredWill}}</p>
+      </div>
+       
+        <div class="col-md-3">
+            <h6>Mobile No.</h6>
+            <p>{{nonPiidata2Aadhar.mobileNo}}</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Aadhaar No.</h6>
+          <p>{{nonPiidata2Aadhar.aadhaarNo}}</p>
+      </div>
+   
+    </div>
+    <div class="row">
+        
+        <div class="col-md-3">
+            <h6>Email ID</h6>
+            <p>{{nonPiidata2Aadhar.emailId}}</p>
+        </div>
+        <div class="col-md-3">
+            <h6>Ownership Percentage</h6>
+            <p>{{nonPiidata2Aadhar.ownershipPercentage}}</p>
+        </div>
+       
+    </div>
+ 
+        <div class="row">
+          <div class="col-md-3">
+            <h6 *ngIf="pinCodeCommon">Pin Code</h6>
+            <p *ngIf="pinCodeCommon">{{ pinCodeCommon }}</p>
+          </div>
+          <div class="col-md-3">
+            <h6 *ngIf="fatherNameCommon">Father's Name</h6>
+            <p *ngIf="fatherNameCommon">{{ fatherNameCommon }}</p>
+          </div>
+          <div class="col-md-3">
+            <h6 *ngIf="genderCommon">Gender</h6>
+            <p *ngIf="genderCommon">{{ genderCommon }}</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row non-piiData1" *ngIf="showNonPiiData1 && !addressMatched">
+  <div class="col-md-12 stretch-card">
+    <div class="card venuesCss">
+      <div class="card-body ">
+        <h6 class="card-title">Non PII - Food And Supplies Dept: Smart Ration Card Scheme  </h6>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Age</h6>
+                <p>{{nonPiidata1Aadhar?.age}}</p>
+            </div>
+            <!-- <div class="col-md-3">
+                <h6>Member Name</h6>
+                <p>{{memberName}}</p>
+            </div> -->
+            <div class="col-md-3">
+              <h6>Pin Code</h6>
+              <p *ngIf="!singlePincode && (showNonPiiData1 && showNonPiiData2)">
+                  <span style="color: red;">{{nonPiidata1Aadhar?.pincode}}</span>
+              </p>
+              <p *ngIf="singlePincode && (showNonPiiData1 || showNonPiiData2)">
+                  <span>{{nonPiidata1Aadhar?.pincode}}</span>
+              </p>
+          </div>
+            <div class="col-md-3">
+                <h6>Father's Name</h6>
+                <p *ngIf="!isParent && (showNonPiiData1 && showNonPiiData2)">
+                    <span [style.color]="fatherName1.toLowerCase() === guardianName1.toLowerCase() ? 'black' : 'red'">{{nonPiidata1Aadhar.fatherName}}</span>
+                </p>
+                <p *ngIf="isParent && (showNonPiiData1 || showNonPiiData2)">
+                    <span>{{nonPiidata1Aadhar.fatherName}}</span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6>Mother's Name</h6>
+                <p>{{nonPiidata1Aadhar.motherName}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Relationship with Head of Family</h6>
+                <p>{{nonPiidata1Aadhar.relationshipWithHeadOfFamily}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Date of Birth</h6>
+                <p>{{nonPiidata1Aadhar.dateOfbirth}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Gender</h6>
+                <p *ngIf="!isGender && (showNonPiiData1 && showNonPiiData2)">
+                    <span [style.color]="gender1.toLowerCase() === gender2.toLowerCase() ? 'black' : 'red'">{{nonPiidata1Aadhar.gender}}</span>
+                </p>
+                <p *ngIf="isGender && (showNonPiiData1 || showNonPiiData2)">
+                    <span>{{nonPiidata1Aadhar.gender}}</span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6>Nationality</h6>
+                <p>{{nonPiidata1Aadhar.nationality}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Spouse Name</h6>
+                <p>{{nonPiidata1Aadhar.spouseName}}</p>
+            </div>
+           
+            <div class="col-md-3">
+                <h6>Document Type</h6>
+                <p>{{nonPiidata1Aadhar.documentType}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Document Issue Date</h6>
+                <p>{{nonPiidata1Aadhar.documentIssueDate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Document Number</h6>
+                <p>{{nonPiidata1Aadhar.documentNumber}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>MNREGA</h6>
+                <p>{{nonPiidata1Aadhar.mnrega}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>MNREGA Card No.</h6>
+                <p>{{nonPiidata1Aadhar.mnregaCardNo}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Critical Illness</h6>
+                <p>{{nonPiidata1Aadhar.criticalIllness}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Critical Illness Type</h6>
+                <p>{{nonPiidata1Aadhar.criticalIllnessType}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Critical Illness Since</h6>
+                <p>{{nonPiidata1Aadhar.criticalIllnessSince}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Caste Type</h6>
+                <p>{{nonPiidata1Aadhar.casteType}}</p>
+            </div>
+            <!-- <div class="col-md-3">
+                <h6>Birth Certificate</h6>
+                <p>{{nonPiidata1Aadhar.birthCertificate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Critical Illness Certificate</h6>
+                <p>{{nonPiidata1Aadhar.criticalIllnessCertificate}}</p>
+            </div> -->
+            <div class="col-md-3">
+                <h6>Sub-District</h6>
+                <p>{{nonPiidata1Aadhar.subDistrict}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>District</h6>
+                <p>{{nonPiidata1Aadhar.district}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Any Disability</h6>
+                <p>{{nonPiidata1Aadhar.anyDisability}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Disability Type</h6>
+                <p>{{nonPiidata1Aadhar.disabilityType}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Disability Cause</h6>
+                <p>{{nonPiidata1Aadhar.disabilityCause}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Disability Percentage</h6>
+                <p>{{nonPiidata1Aadhar.disabilityPercentage}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Special Category</h6>
+                <p>{{nonPiidata1Aadhar.specialCategory}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Bank Name</h6>
+                <p>{{nonPiidata1Aadhar.bankName}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Bank District</h6>
+                <p>{{nonPiidata1Aadhar.bankDistrict}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Bank State</h6>
+                <p>{{nonPiidata1Aadhar.bankState}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Bank Account Number</h6>
+                <p>{{nonPiidata1Aadhar.bankAccountNumber}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Branch Name</h6>
+                <p>{{nonPiidata1Aadhar.branchName}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Card Type</h6>
+                <p>{{nonPiidata1Aadhar.cardType}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>House No.</h6>
+                <p>{{nonPiidata1Aadhar.houseNo}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>House Name</h6>
+                <p>{{nonPiidata1Aadhar.houseName}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Landmark</h6>
+                <p>{{nonPiidata1Aadhar.lankmark}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Locality</h6>
+                <p>{{nonPiidata1Aadhar.locality}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Colony</h6>
+                <p>{{nonPiidata1Aadhar.colony}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Village</h6>
+                <p>{{nonPiidata1Aadhar.village}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Town Name</h6>
+                <p>{{nonPiidata1Aadhar.townName}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Taluka</h6>
+                <p>{{nonPiidata1Aadhar.taluka}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Tehsil</h6>
+                <p>{{nonPiidata1Aadhar.tehsil}}</p>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class="col-md-3">
+                <h6>State</h6>
+                <p>{{nonPiidata1Aadhar.state}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Block</h6>
+                <p>{{nonPiidata1Aadhar.block}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Occupation</h6>
+                <p>{{nonPiidata1Aadhar.occupation}}</p>
+            </div>
+            <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">Birth Certificate</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata1Aadhar.birthCertificate)"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">MNREGA Card</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata1Aadhar.mnregaCard)"
+                  >
+                    Download
+                  </button>
+                  <!-- <span>{{ departmentData.mnregaCard }}</span> -->
+                </div>
+              </div>
+            <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">CriticalIllness Certificate</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata1Aadhar.criticalIllnessCertificate)"
+                  >
+                    Download
+                  </button>
+                  <!-- <span>{{ departmentData.mnregaCard }}</span> -->
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">Caste Document</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata1Aadhar.casteDocument)"
+                  >
+                    Download
+                  </button>
+                  <!-- <span>{{ departmentData.casteDocument }}</span> -->
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">Disability Certificate</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="
+                      downloadDocument(nonPiidata1Aadhar.disabilityCertificate)
+                    "
+                  >
+                    Download
+                  </button>
+                  <!-- <span>{{ departmentData.disabilityCertificate }}</span> -->
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="row non-piiData2" *ngIf="showNonPiiData2 && !addressMatched">
+  <div class="col-md-12 stretch-card">
+    <div class="card venuesCss">
+      <div class="card-body ">
+        <h6 class="card-title">Non PII - Department of Local Govt: Property Tax Scheme</h6>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>City</h6>
+                <p>{{nonPiidata2Aadhar.city}}</p> 
+            </div>
+            <div class="col-md-3">
+                <h6>House/Shop No.</h6>
+                <p>{{nonPiidata2Aadhar.houseOrShopNo}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Building/Colony Name</h6>
+                <p>{{nonPiidata2Aadhar.buildingOrColonyName}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Street Name</h6>
+                <p>{{nonPiidata2Aadhar.streetName}}</p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Locality/Mohalla</h6>
+                <p>{{nonPiidata2Aadhar.localityOrMohalla}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Pin Code</h6>
+                <p *ngIf="!singlePincode && (showNonPiiData1 && showNonPiiData2)">
+                    <span style="color: red;">{{nonPiidata2Aadhar.pincode}}</span>
+                </p>
+                <p *ngIf="singlePincode && (showNonPiiData1 || showNonPiiData2)">
+                    <span>{{nonPiidata2Aadhar.pincode}}</span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6>Property ID</h6>
+                <p>{{nonPiidata2Aadhar.propertyId}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Survey ID</h6>
+                <p>{{nonPiidata2Aadhar.surveyId}}</p>
+            </div>
+            </div>
+            
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Year of Creation of Property</h6>
+                <p>{{nonPiidata2Aadhar.yearOfCreationOfProperty}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Type</h6>
+                <p>{{nonPiidata2Aadhar.type}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Property Type</h6>
+                <p>{{nonPiidata2Aadhar.propertyType}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Vasika No.</h6>
+                <p>{{nonPiidata2Aadhar.vasikaNo}}</p>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Vasika Date</h6>
+                <p>{{nonPiidata2Aadhar.vasikaDate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Allotment No.</h6>
+                <p>{{nonPiidata2Aadhar.allotmentNo}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Allotment Date</h6>
+                <p>{{nonPiidata2Aadhar.allotmentDate}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Business Name</h6>
+                <p>{{nonPiidata2Aadhar.businessName}}</p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Remark</h6>
+                <p>{{nonPiidata2Aadhar.remark}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Inflammable Material Stored</h6>
+                <p>{{nonPiidata2Aadhar.inflammableMaterialStoredInYourProperty}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Property More Than 36FT</h6>
+                <p>{{nonPiidata2Aadhar.propertyMoreThan36FT}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Yards</h6>
+                <p>{{nonPiidata2Aadhar.yards}}</p>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Ownership</h6>
+                <p>{{nonPiidata2Aadhar.ownerShip}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Gender</h6>
+                <p *ngIf="!isGender && (showNonPiiData1 && showNonPiiData2)">
+                    <span [style.color]="gender1.toLowerCase() === gender2.toLowerCase() ? 'black' : 'red'">{{nonPiidata2Aadhar.gender}}</span>
+                </p>
+                <p *ngIf="isGender && (showNonPiiData1 || showNonPiiData2)">
+                    <span>{{nonPiidata2Aadhar.gender1}}</span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6>Mobile No.</h6>
+                <p>{{nonPiidata2Aadhar.mobileNo}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Guardian Name</h6>
+                <p *ngIf="!isParent && (showNonPiiData1 && showNonPiiData2)">
+                    <span [style.color]="fatherName1.toLowerCase() === guardianName1.toLowerCase() ? 'black' : 'red'">{{nonPiidata2Aadhar.guardianName}}</span>
+                </p>
+                <p *ngIf="isParent && (showNonPiiData1 || showNonPiiData2)">
+                    <span>{{nonPiidata2Aadhar.guardianName}}</span>
+                </p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Relationship</h6>
+                <p>{{nonPiidata2Aadhar.relationship}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Special Category</h6>
+                <p>{{nonPiidata2Aadhar.specialCategory1}}</p>
+               
+            </div>
+            <div class="col-md-3">
+                <h6>Email ID</h6>
+                <p>{{nonPiidata2Aadhar.emailId}}</p>
+            </div>
+            <div class="col-md-3">
+                <h6>Ownership Percentage</h6>
+                <p>{{nonPiidata2Aadhar.ownershipPercentage}}</p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6>Address</h6>
+                <p>{{nonPiidata2Aadhar.address}}</p>
+            </div>
+            <!-- <div class="col-md-3">
+                <h6>Aadhaar No.</h6>
+                <p>{{nonPiidata2Aadhar.aadhaarNo}}</p>
+            </div> -->
+            <div class="col-md-3">
+                <h6>Registered Will</h6>
+                <p>{{nonPiidata2Aadhar.registeredWill}}</p>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">Usage Proof</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata2Aadhar.usasgeProof)"
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="mb-3 form-group">
+                  <label class="form-label">Address Proof</label> <br />
+                  <button
+                    class="btn btn-primary"
+                    (click)="downloadDocument(nonPiidata2Aadhar.addressProof)"
+                  >
+                    Download
+                  </button>
+                  <!-- <span>{{ departmentData.mnregaCard }}</span> -->
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+

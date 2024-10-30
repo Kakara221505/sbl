@@ -1,0 +1,145 @@
+<!-- <div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Data Inference 
+                
+                </h6>
+                
+                <form>
+                    <div class="table-responsive tableFlag">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>  
+                                    <th>SR No.</th>
+                                    <th>Aadhar No </th>
+                                    <th>Ration Card Type</th>
+                                    <th>Property Type</th>
+                                    <th>
+                                        Vasika No
+                                        </th>
+                                        <th>PHH Eligibility Flag</th>
+                                    <th>Any Disability</th>                                  
+                                    <th>Special Category in Local Govt</th>
+                                    <th>Special Category Eligibility Flag</th>
+                                 
+                                   
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of inference; let i = index">
+                                    <td>{{i+1}}</td>
+                                    <td><a href="/blockchain/views/{{item.aadhaarNo}}"  target="_blank" >{{item.aadhaarNo}}</a></td>
+                                   
+                                    <td>{{item.cardType}}</td>
+                                    <td> <p >{{item.propertyType}}</p></td>
+                                    <td>
+                                        <p>{{item.vasikaNo}}</p>
+                                       </td>
+                                    <td>
+                                        <p *ngIf="item.propertyUsageFlag === 'Red' " style="background-color: red;color: red;"><span style="width: 20px !important;"> {{item.propertyType}}</span> </p>
+                                        <p *ngIf="item.propertyUsageFlag === 'Green'" style="background-color: green; color: green;">{{item.propertyType}} </p>
+                                        <p *ngIf="item.propertyUsageFlag === 'Blue'" style="background-color:rgb(101, 101, 255);color: rgb(101, 101, 255);">{{item.propertyType}}</p>
+                                        <p *ngIf="item.propertyUsageFlag === '-'" style="background-color: white;">-</p></td>
+                                        <td>{{item.anyDisability}}</td>
+                                       
+                                   <td>{{item.specialCategory}}</td>
+
+                                    <td>
+                                        <p *ngIf="item.specialCategoryFlag === 'Red' " style="background-color: red;color: red;"><span style="width: 20px !important;"> {{item.specialCategoryFlag}}</span> </p>
+                                        <p *ngIf="item.specialCategoryFlag === 'Green'" style="background-color: green; color: green;">{{item.specialCategoryFlag}} </p>
+                                        <p *ngIf="item.specialCategoryFlag === 'Blue'" style="background-color:rgb(101, 101, 255);color: rgb(101, 101, 255);">{{item.specialCategoryFlag}}</p>
+                                        <p *ngIf="item.specialCategoryFlag === '-'" style="background-color: white;">-</p>
+                                       </td>
+                                    
+                                   
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Data Inference 
+                
+                </h6>
+
+<div class="tableFixHead">
+    <table>
+      <thead>
+        <tr>
+         
+                <th>SR No.</th>
+                <th>Aadhar No </th>
+                <!-- <th>Name </th> -->
+                <th style="background-color: #f0ebeb;">Ration Card Type</th>
+                <!-- <th>
+                    Property Usage Type
+                </th> -->
+                <th style="background-color: #f0ebeb;">Property Type</th>
+                <th style="background-color: #f0ebeb;">
+                    Vasika No
+                    </th>
+                    <th style="width: 18%; background-color: #f0ebeb;">PHH Eligibility Flag</th>
+                <th>Any Disability</th>                                  
+                <th>Special Category in Local Govt</th>
+                <th style="width: 18%;">Special Category Eligibility Flag</th>
+                <!-- <th>Current Scheme Card No.</th> -->
+               
+               
+            </tr>
+      
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inference; let i = index">
+            <td>{{i+1}}</td>
+            <td><a href="/blockchain/views/{{item.aadhaarNo}}"  target="_blank" >{{item.aadhaarNo}}</a></td>
+            <!-- <td>{{item.name}}</td> -->
+            <td style="background-color: #f0ebeb;">{{item.cardType}}</td>
+            <td style="background-color: #f0ebeb;"> <p >{{item.propertyType}}</p></td>
+           
+          
+            <!-- <td>{{item.propertyType}}</td> -->
+            <td style="background-color: #f0ebeb;">
+                <p>{{item.vasikaNo}}</p>
+               </td>
+            <td style="background-color: #f0ebeb;">
+                <p *ngIf="item.propertyUsageFlag === 'Red' " style="background-color: red;color: red;"><span style="width: 20px !important;"> {{item.propertyType}}</span> </p>
+                <p *ngIf="item.propertyUsageFlag === 'Green'" style="background-color: green; color: green;">{{item.propertyType}} </p>
+                <p *ngIf="item.propertyUsageFlag === 'Blue'" style="background-color:rgb(101, 101, 255);color: rgb(101, 101, 255);">{{item.propertyType}}</p>
+                <p  *ngIf="item.propertyUsageFlag === '-'" style="background-color: #f0ebeb;">-</p></td>
+                <td>{{item.anyDisability}}</td>
+               
+            <!-- <td>
+                <p *ngIf="item.specialCategory === 'Red' " style="background-color: red;color: red;"><span style="width: 20px !important;"> {{item.specialCategory}}</span> </p>
+                <p *ngIf="item.specialCategory === 'Green'" style="background-color: green; color: green;">{{item.specialCategory}} </p>
+                <p *ngIf="item.specialCategory === 'Blue'" style="background-color:rgb(101, 101, 255);color: rgb(101, 101, 255);">{{item.specialCategory}}</p>
+                <p *ngIf="item.specialCategory === '-'" style="background-color: white;">-</p>
+               </td> -->
+           <td>{{item.specialCategory}}</td>
+
+            <td>
+                <p *ngIf="item.specialCategoryFlag === 'Red' " style="background-color: red;color: red;"><span style="width: 20px !important;"> {{item.specialCategoryFlag}}</span> </p>
+                <p *ngIf="item.specialCategoryFlag === 'Green'" style="background-color: green; color: green;">{{item.specialCategoryFlag}} </p>
+                <p *ngIf="item.specialCategoryFlag === 'Blue'" style="background-color:rgb(101, 101, 255);color: rgb(101, 101, 255);">{{item.specialCategoryFlag}}</p>
+                <p *ngIf="item.specialCategoryFlag === '-'" style="background-color: white;">-</p>
+               </td>
+            
+           
+            </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+

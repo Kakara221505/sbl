@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+
+            <div class="card-body">
+                <h6 class="card-title">Payment & Rewards </h6>
+                <div class="row">
+                    <form #paymentList="ngForm">
+                        <div class="col-md-10">
+                            <h6>Total No. of Rectifications : {{paymentList1}}</h6>
+                            <h6>Total No. of Token : {{paymentToken}}</h6>
+                            <h6>₹1 = <input type="text" value="{{tokenValue}}" style="width: 40px; padding-left: 10px;"
+                                    name="value" [(ngModel)]="value"> Token <button type="submit"
+                                    class="btn btn-primary" (click)="changeValue()">Submit</button></h6>
+                        </div>
+                        <div class="col-md-2 Duration">
+                            <div class="multiple">
+                                <label for="duration">Duration</label> <br>
+                                <select name="durations" id="duration" (change)="paymentByType()" [(ngModel)]="type">
+                                    <option value="all" selected>All</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <form>
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>Aadhaar No.</th>
+                                    <th>No. of Rectifications</th>
+                                    <th>Reward Point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of paymentRewardData   | paginate
+                                : {
+                                    itemsPerPage: page,
+                                    currentPage: p,
+                                    totalItems: copyArr
+                                  };
+                            index as i">
+                                    <td>{{list.id}}</td>
+                                    <td>{{list.aadhaarNo}}</td>
+                                    <td>{{list.noOfRectification}}</td>
+                                    <td>{{list.rewardPoints}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <pagination-controls previousLabel="Prev" nextLabel="Next"
+                                (pageChange)="p = $event; payment()">
+                            </pagination-controls>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

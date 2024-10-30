@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Data Validation 
+                </h6>
+                <form #ExchangeForm="ngForm">
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded" placeholder="Search by Aadhar Number"
+                            name="aadharNumber"  #aadharNumber="ngModel" [(ngModel)]="aadhaarNo"  aria-label="Clear" (keyup)="exchangeDataList()"
+                            aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary" (click)="exchangeDataList()">Search
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>  
+                                    <th>RequestFrom </th>
+                                    <th>Request To </th>
+                                    <th>Aadhaar No.</th>
+                                    <th>Document Type</th>
+                                    <th>Date Of Request</th>
+                                    <th>Status</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of dataExchange  | paginate
+                                : {
+                                    itemsPerPage: page,
+                                    currentPage: p,
+                                    totalItems: totalElement
+                                  };
+                            index as i">
+                                    <td>{{list.requestedFrom}} </td>
+                                    <td>{{list.requestedFor}} </td>
+                                    <td>{{list.aadhaarNo}} </td>
+                                    <td>{{list.documentType}} </td>
+                                    <td>{{list.date | date : 'mediumDate'}} </td>
+                                    <td>{{list.status}} </td>
+                                   
+                                   
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div>
+                                <pagination-controls previousLabel="Prev" nextLabel="Next"
+                                    (pageChange)="p = $event; exchangeData()"
+                                    ></pagination-controls>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

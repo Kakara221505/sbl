@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">PII
+                </h6>
+                <form #piiDataForm="ngForm">
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded" placeholder="Search by Aadhar Number"
+                            name="aadharNumber" #aadharNumber="ngModel" [(ngModel)]="aadhaarNo" aria-label="Clear"
+                            (keyup)="piiDataList()"
+                            aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary" (click)="piiDataList()">Search
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Aadhaar No.</th>
+                                    <!-- <th>Mobile No.</th> -->
+                                    <th>Name</th>
+                                    <!-- <th>Department</th> -->
+                                    <th>UUID</th> 
+                                    <th>Status</th> 
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of piidata">
+                                    <th>{{list.id}} </th>
+                                    <th><a  [routerLink]="['/pii/view/', list.aadhaarNo]">{{list.aadhaarNo}}</a> </th>
+                                    <!-- <th>{{list.mobileNumber || '-'}} </th> -->
+                                    <th>{{list.name || '-'}} </th>
+                                    <!-- <th>{{list.department || '-'}} </th> -->
+                                    <th>{{list.uuid || '-'}} </th>
+                                    <th>{{list.status || '-'}} </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: black">Loading...</p>
+</ngx-spinner>

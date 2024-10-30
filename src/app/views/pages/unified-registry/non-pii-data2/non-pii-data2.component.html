@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Non PII - Department of Local Govt: Property Tax Scheme </h6>
+                <form #NonPii2DataForm="ngForm">
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>City</th>
+                                    <th>House/Shop No.</th>
+                                    <th>Building/Colony Name</th>
+                                    <th>Street Name</th>
+                                    <th>Locality/Mohalla</th>
+                                    <th>Pincode</th>
+                                    <th>Property ID</th>
+                                    <th>Survey ID</th>
+                                    <th>Year of Creation</th>
+                                    <th>Type</th>
+                                    <th>Property Type</th>
+                                    <th>Vasika No.</th>
+                                    <th>Vasika Date</th>
+                                    <th>Allotment No.</th>
+                                    <th>Allotment Date</th>
+                                    <th>Business Name</th>
+                                    <th>Remark</th>
+                                    <th>Inflammable Material</th>
+                                    <th>Property More Than 36FT</th>
+                                    <th>Yards</th>
+                                    <th>Ownership</th>
+                                    <th>Gender</th>
+                                    <th>Mobile No.</th>
+                                    <th>Guardian Name</th>
+                                    <th>Relationship</th>
+                                    <th>Special Category</th>
+                                    <th>Email ID</th>
+                                    <th>Ownership Percentage</th>
+                                    <th>Address</th>
+                                    <th>Address Proof</th>
+                                    <th>Aadhaar No.</th>
+                                    <th>Registered Will</th>
+                                    <!-- <th>Usage Proof</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of nonPiiData">
+                                    <td>{{ list.localgovId }}</td>
+                                    <td>{{ list.city }}</td>
+                                    <td>{{ list.houseOrShopNo }}</td>
+                                    <td>{{ list.buildingOrColonyName || '-' }}</td>
+                                    <td>{{ list.streetName }}</td>
+                                    <td>{{ list.localityOrMohalla || '-' }}</td>
+                                    <td>{{ list.pincode }}</td>
+                                    <td>{{ list.propertyId }}</td>
+                                    <td>{{ list.surveyId }}</td>
+                                    <td>{{ list.yearOfCreationOfProperty }}</td>
+                                    <td>{{ list.type }}</td>
+                                    <td>{{ list.propertyType }}</td>
+                                    <td>{{ list.vasikaNo }}</td>
+                                    <td>{{ list.vasikaDate }}</td>
+                                    <td>{{ list.allotmentNo }}</td>
+                                    <td>{{ list.allotmentDate }}</td>
+                                    <td>{{ list.businessName }}</td>
+                                    <td>{{ list.remark }}</td>
+                                    <td>{{ list.inflammableMaterialStoredInYourProperty }}</td>
+                                    <td>{{ list.propertyMoreThan36FT }}</td>
+                                    <td>{{ list.yards }}</td>
+                                    <td>{{ list.ownerShip }}</td>
+                                    <td>{{ list.gender }}</td>
+                                    <td>{{ list.mobileNo }}</td>
+                                    <td>{{ list.guardianName }}</td>
+                                    <td>{{ list.relationship }}</td>
+                                    <td>{{ list.specialCategory }}</td>
+                                    <td>{{ list.emailId }}</td>
+                                    <td>{{ list.ownershipPercentage }}</td>
+                                    <td>{{ list.address }}</td>
+                                    <td>{{ list.addressProof || '-' }}</td>
+                                    <td>{{ list.aadhaarNo || '-' }}</td>
+                                    <td>{{ list.registeredWill }}</td>
+                                    <!-- <td>{{ list.usageProof || '-' }}</td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: black">Loading...</p>
+</ngx-spinner>

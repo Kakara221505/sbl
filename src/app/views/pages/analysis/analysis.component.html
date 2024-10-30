@@ -1,0 +1,218 @@
+<div class="row">
+    <div class="col-xl-12 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">Total No. of Users
+              <form class="d-flex range-selection">
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                    name="de"   [(ngModel)]="fromDate" [maxDate]="maxDate" ngbDatepicker  #de="ngbDatepicker" >
+                    <button class="btn btn-outline-secondary bi bi-calendar3" type="button" (click)="de.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div> 
+                
+                <div class="mb-4 datePicker" >
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy" 
+                        name="dp" [(ngModel)]="toDate" [maxDate]="maxDate" ngbDatepicker #e="ngbDatepicker" >
+                    <button class="input-group-text" type="button" (click)="e.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="apply">
+                  <button type="submit" class="btn btn-primary" (click)="onDateSelection()">Apply</button>
+                </div>
+                </form>
+            </h6>
+
+            <apx-chart class="totaluser"
+        [series]="barChartOptions.series"
+        [colors]="barChartOptions.colors"
+        [grid]="barChartOptions.grid"
+        [chart]="barChartOptions.chart"
+        [xaxis]="barChartOptions.xaxis"
+      ></apx-chart>
+      
+        </div>
+      </div>
+    </div>
+</div>
+<!-- pie chart -->
+<div class="row">
+    <div class="col-xl-6 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">Conflict Raised Till Date <span>(Total - {{allraisedTotal}})</span> 
+            </h6>
+           <p class="rectification"> (In terms of no. of person)</p>
+            <apx-chart
+            [series]="PiechartOptions.series"
+            [colors]="PiechartOptions.colors"
+            [chart]="PiechartOptions.chart"
+            [labels]="PiechartOptions.labels"
+            [responsive]="PiechartOptions.responsive"
+          ></apx-chart>
+          </div>
+        </div>
+      </div> 
+<!--  pie  chart 2 -->
+    <div class="col-xl-6 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">Conflict Resolved Till Date <span>(Total - {{allractificationTotal}})</span>
+            </h6>
+            <p class="rectification"> (In terms of no. of fields )</p>
+            <apx-chart
+            [series]="PiechartOptionsRaised.series"
+            [colors]="PiechartOptionsRaised.colors"
+            [chart]="PiechartOptionsRaised.chart"
+            [labels]="PiechartOptionsRaised.labels"
+            [responsive]="PiechartOptionsRaised.responsive"
+          ></apx-chart>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- pie chart 3 -->
+<!-- <div class="row">
+    <div class="col-xl-12 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">Reward Points Given Out <span>(Total - {{allrewardTodatl}})</span>
+               <form class="d-flex range-selection">
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                        name="datePicker" [(ngModel)]="fromRewardDate" [maxDate]="maxDate"  ngbDatepicker #m="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="m.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                        name="dp" [(ngModel)]="toRewardDate" [maxDate]="maxDate" ngbDatepicker #o="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="o.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="apply">
+                  <button type="submit" class="btn btn-primary" (click)="reward()">Apply</button>
+                </div>
+                </form>
+            </h6>
+            <div class="rewardPoint">
+            <apx-chart
+            [series]="PiechartOptionsReward.series"
+            [colors]="PiechartOptionsReward.colors"
+            [chart]="PiechartOptionsReward.chart"
+            [labels]="PiechartOptionsReward.labels"
+            [responsive]="PiechartOptionsReward.responsive"
+          ></apx-chart>
+        </div>
+          </div>
+        </div>
+      </div>
+</div>  -->
+
+<div class="row">
+    <div class="col-xl-12 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">Data Validation Request 
+              <form class="d-flex range-selection">
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                        name="datePicker" [(ngModel)]="exchangeFromDate" [maxDate]="maxDate" ngbDatepicker #a="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="a.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                        name="dp" [(ngModel)]="exchangeToDate" [maxDate]="maxDate" ngbDatepicker #b="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="b.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="apply">
+                  <button type="submit" class="btn btn-primary" (click)="exchangeData()">Apply</button>
+                </div>
+                </form>
+            </h6>
+            <div class="exchangeValue">
+            <apx-chart
+            [series]="chartOptions.series"
+            [colors]="chartOptions.colors"
+            [chart]="chartOptions.chart"
+            [dataLabels]="chartOptions.dataLabels"
+            [plotOptions]="chartOptions.plotOptions"
+            [yaxis]="chartOptions.yaxis"
+            [legend]="chartOptions.legend"
+            [fill]="chartOptions.fill"
+            [stroke]="chartOptions.stroke"
+            [tooltip]="chartOptions.tooltip"
+            [xaxis]="chartOptions.xaxis"
+          ></apx-chart>
+        </div>
+          </div>
+        </div>
+      </div>
+</div> 
+
+
+<!--  -->
+<!-- <div class="row">
+    <div class="col-xl-12 stretch-card">
+        <div class="card userCard">
+          <div class="card-body">
+            <h6 class="card-title">No. of Users Benefiting from Dept 2 Scheme Across Income Brackets
+              <form class="d-flex range-selection">
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" placeholder="dd/mm/yyyy"
+                        name="datePicker" [(ngModel)]="incomeFromDate" [maxDate]="maxDate" ngbDatepicker #f="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="f.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-4 datePicker">
+                  <div class="input-group ">
+                    <input class="form-control" id="chooseDate" [maxDate]="maxDate" placeholder="dd/mm/yyyy"
+                        name="dp" [(ngModel)]="incomeToDate" ngbDatepicker #g="ngbDatepicker">
+                    <button class="input-group-text" type="button" (click)="g.toggle()">
+                      <i class="feather icon-calendar icon-md text-muted"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="apply">
+                  <button type="submit" class="btn btn-primary" (click)="incomeAvailing()">Apply</button>
+                </div>
+                </form>
+              </h6>
+              <p class="rectification"> ( Dept 1 provides the income information, while the count of users participating in the scheme is gathered from Dept 2. )</p>
+              <div class="exchangeValue">
+            <apx-chart
+            [series]="OptionsForIncome.series"
+            [colors]="OptionsForIncome.colors"
+            [grid]="OptionsForIncome.grid"
+            [chart]="OptionsForIncome.chart"
+            [xaxis]="OptionsForIncome.xaxis"
+          ></apx-chart>
+          </div>
+          <h2 class="RupeesPerYear">In thousands of rupees per year</h2>
+        </div>
+      </div>
+</div>  -->

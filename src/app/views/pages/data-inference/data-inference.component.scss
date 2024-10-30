@@ -1,0 +1,55 @@
+.selectFlag{
+    width: 70px;
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 26px;
+    color: #7987a1;
+    border-color: #7987a1;
+}
+.table thead th{
+    text-transform: capitalize;
+}
+.table th{
+    font-size: 13px !important;
+    white-space: normal !important;
+}
+.table td{
+    font-size: 13px !important;
+    white-space: normal !important;
+}
+.selectFlagFilter{
+    width: 120px !important;
+    border-radius: 5px !important;
+    height: 40px !important;
+    margin-left: 20px !important;
+    font-size: 15px;
+    padding-left: 10px !important;
+}
+.FromFlag{
+    float: right;
+}
+.submitbtnApply{
+    margin-bottom: 20px !important;
+    margin-left: 20px !important;
+    height: 40px !important;
+}
+.tableFlag{
+    margin-top: 45px !important;
+}
+.labelCheck{
+    margin-top: 8px !important;
+}
+
+table { border-collapse: collapse; width: 100%; }
+th, td { background: #fff; padding: 8px 16px; }
+
+
+.tableFixHead {
+  overflow: auto;
+  height: 620px;
+}
+
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}

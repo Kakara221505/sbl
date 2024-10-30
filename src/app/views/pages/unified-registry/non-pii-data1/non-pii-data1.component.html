@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Non PII - Food And Supplies Dept: Smart Ration Card Scheme </h6>
+                <form #NonPiiDataForm="ngForm">
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Spouse Name</th>
+                                    <th>Father Name</th>
+                                    <th>Mother Name</th>
+                                    <th>Relationship with Head of Family</th>
+                                    <th>Age</th>
+                                    <th>Date of Birth</th>
+                                    <th>Gender</th>
+                                    <th>Nationality</th>
+                                    <th>Occupation</th>
+                                    <th>Document Type</th>
+                                    <th>Document Issue Date</th>
+                                    <th>Document Number</th>
+                                    <th>MNREGA</th>
+                                    <th>MNREGA Card No.</th>
+                                    <th>Critical Illness</th>
+                                    <th>Critical Illness Type</th>
+                                    <th>Critical Illness Since</th>
+                                    <th>Caste Type</th>
+                                    <th>Any Disability</th>
+                                    <th>Disability Type</th>
+                                    <th>Disability Cause</th>
+                                    <th>Disability Percentage</th>
+                                    <th>Special Category</th>
+                                    <th>Bank Name</th>
+                                    <th>Bank District</th>
+                                    <th>Bank State</th>
+                                    <th>Bank Account Number</th>
+                                    <th>Branch Name</th>
+                                    <th>Card Type</th>
+                                    <th>House No.</th>
+                                    <th>House Name</th>
+                                    <th>Landmark</th>
+                                    <th>Locality</th>
+                                    <th>Colony</th>
+                                    <th>Village</th>
+                                    <th>Town Name</th>
+                                    <th>Taluka</th>
+                                    <th>Tehsil</th>
+                                    <th>Sub-District</th>
+                                    <th>District</th>
+                                    <th>State</th>
+                                    <th>Block</th>
+                                    <th>Pincode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let list of nonPiiData">
+                                    <td>{{ list.foodSuppliesId }}</td>
+                                    <td>{{ list.spouseName }}</td>
+                                    <td>{{ list.fatherName }}</td>
+                                    <td>{{ list.motherName }}</td>
+                                    <td>{{ list.relationshipWithHeadOfFamily }}</td>
+                                    <td>{{ list.age }}</td>
+                                    <td>{{ list.dateOfbirth }}</td>
+                                    <td>{{ list.gender }}</td>
+                                    <td>{{ list.nationality }}</td>
+                                    <td>{{ list.occupation }}</td>
+                                    <td>{{ list.documentType }}</td>
+                                    <td>{{ list.documentIssueDate }}</td>
+                                    <td>{{ list.documentNumber }}</td>
+                                    <td>{{ list.mnrega }}</td>
+                                    <td>{{ list.mnregaCardNo }}</td>
+                                    <td>{{ list.criticalIllness }}</td>
+                                    <td>{{ list.criticalIllnessType }}</td>
+                                    <td>{{ list.criticalIllnessSince }}</td>
+                                    <td>{{ list.casteType }}</td>
+                                    <td>{{ list.anyDisability }}</td>
+                                    <td>{{ list.disabilityType }}</td>
+                                    <td>{{ list.disabilityCause }}</td>
+                                    <td>{{ list.disabilityPercentage }}</td>
+                                    <td>{{ list.specialCategory }}</td>
+                                    <td>{{ list.bankName }}</td>
+                                    <td>{{ list.bankDistrict }}</td>
+                                    <td>{{ list.bankState }}</td>
+                                    <td>{{ list.bankAccountNumber }}</td>
+                                    <td>{{ list.branchName }}</td>
+                                    <td>{{ list.cardType }}</td>
+                                    <td>{{ list.houseNo }}</td>
+                                    <td>{{ list.houseName }}</td>
+                                    <td>{{ list.lankmark }}</td>
+                                    <td>{{ list.locality }}</td>
+                                    <td>{{ list.colony }}</td>
+                                    <td>{{ list.village }}</td>
+                                    <td>{{ list.townName }}</td>
+                                    <td>{{ list.taluka }}</td>
+                                    <td>{{ list.tehsil }}</td>
+                                    <td>{{ list.subDistrict }}</td>
+                                    <td>{{ list.district }}</td>
+                                    <td>{{ list.state }}</td>
+                                    <td>{{ list.block }}</td>
+                                    <td>{{ list.pincode }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: black">Loading...</p>
+</ngx-spinner>

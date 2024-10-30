@@ -1,0 +1,38 @@
+<div class="row w-100 mx-0 auth-page">
+  <div class="col-md-8 col-xl-6 mx-auto">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4 pr-md-0">
+          <div class="auth-left-wrapper">
+            <img src="../../../../../assets/images/URS Logo.png" alt="URS Logo" />
+          </div>
+        </div>
+        <div class="col-md-8 ps-md-0">
+          <div class="card-title">Unified Registry</div>
+          <div class="auth-form-wrapper px-4 py-5">
+            <a routerLink="." class="nobleui-logo d-block mb-2"><span>Admin Login</span></a>
+            <h5 class="text-muted fw-normal mb-4">Log in to your account.</h5>
+            <form #myform="ngForm">
+              <div class="mb-3 form-group">
+                <label for="exampleInputEmail1" class="form-label">Login ID *</label>
+                <input type="email" class="form-control" id="exampleInputEmail" name="emails" placeholder="Email"
+                  [(ngModel)]="user.email" #emails="ngModel">
+              </div>
+              <div class="mb-3 form-group">
+                <label for="exampleInputPassword1" class="form-label">Password *</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="passwords"
+                  autocomplete="current-password" placeholder="password" [(ngModel)]="user.password"
+                  #passwords="ngModel"(keydown.enter)="onLoggedin(myform)"/>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0"
+                  (click)="onLoggedin(myform)">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
